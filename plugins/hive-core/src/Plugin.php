@@ -16,6 +16,7 @@ final class Plugin {
 		Roles::register_hooks();
 		Blocks\Blocks::register_hooks();
 		Blocks\Bindings::register_hooks();
+		Notifications\BookingMailer::register_hooks();
 
 		if ( is_admin() ) {
 			Admin\SettingsPage::register_hooks();
