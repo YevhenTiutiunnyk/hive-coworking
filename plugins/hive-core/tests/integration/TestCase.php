@@ -11,6 +11,7 @@ use WP_UnitTestCase;
  *
  * WP_UnitTestCase unregisters every meta key after each test, so they are registered again here.
  * The site timezone is Europe/Berlin so that local and UTC times differ.
+ * The REST server is reset so `rest_api_init` runs again with this test's hooks.
  */
 abstract class TestCase extends WP_UnitTestCase {
 
@@ -18,6 +19,9 @@ abstract class TestCase extends WP_UnitTestCase {
 		parent::set_up();
 		Meta::register_all();
 		update_option( 'timezone_string', 'Europe/Berlin' );
+
+		global $wp_rest_server;
+		$wp_rest_server = null; // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound -- Core global.
 	}
 
 	/**

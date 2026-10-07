@@ -30,3 +30,27 @@ npm run env:start   # WordPress at http://localhost:8888 (admin / password)
 | `npm run test:php` | Integration tests inside the wp-env tests container |
 | `composer lint` | PHPCS with WordPress Coding Standards |
 | `composer analyse` | PHPStan, level 6 |
+
+## REST API
+
+Namespace `hive/v1`. Times are ISO 8601; times without an offset are read in the site timezone.
+
+| Method | Route | Access | Description |
+|---|---|---|---|
+| `GET` | `/spaces/{id}/availability?date=YYYY-MM-DD` | Public | Slots of a day with `available` flags |
+| `POST` | `/bookings` | `hive_book_spaces` | Book a space: `{ space_id, start, end }` |
+| `GET` | `/bookings?scope=upcoming\|past` | Logged in | Current user's bookings |
+| `GET` | `/bookings/{id}` | Owner or manager | One booking |
+| `PATCH` | `/bookings/{id}` | Owner or manager | Cancel: `{ "status": "cancelled" }` |
+
+Errors use WordPress's standard shape (`code`, `message`, `data.status`), for example:
+
+| Status | Code | When |
+|---|---|---|
+| 400 | `hive_outside_hours`, `hive_too_soon`, `hive_too_long`, `hive_off_grid` | A booking rule is broken |
+| 401 / 403 | `rest_not_logged_in`, `rest_forbidden` | Not logged in, or not allowed to book |
+| 403 | `hive_cancel_window` | Too late for a member to cancel |
+| 404 | `hive_space_not_found`, `hive_booking_not_found` | Unknown space, or someone else's booking |
+| 409 | `hive_conflict` | The slot overlaps another booking |
+
+Other members' bookings return `404` rather than `403`, so booking IDs cannot be probed.
