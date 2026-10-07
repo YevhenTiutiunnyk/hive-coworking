@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Build output
+plugins/*/build/
+themes/*/build/
+dist/
+
+# Tooling
+.wp-env.override.json
+test-results/
+playwright-report/
+.phpunit.result.cache
+.DS_Store
+*.log
