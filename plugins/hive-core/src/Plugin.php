@@ -38,5 +38,6 @@ final class Plugin {
 
 		( new Rest\AvailabilityController( $service ) )->register_routes();
 		( new Rest\BookingsController( $service, new Bookings\BookingRepository() ) )->register_routes();
+		( new Events\EventsController( new Events\EventRepository() ) )->register_routes();
 	}
 }

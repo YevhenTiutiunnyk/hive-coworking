@@ -1,0 +1,83 @@
+.hive-events {
+	--hive-events-accent: var(--wp--preset--color--accent, #c98a00);
+	--hive-events-border: var(--wp--preset--color--contrast-3, #d6d3cc);
+	--hive-events-muted: var(--wp--preset--color--contrast-2, #6b6760);
+}
+
+.hive-events__list {
+	display: grid;
+	gap: 1rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.hive-events__item {
+	display: flex;
+	gap: 1.25rem;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid var(--hive-events-border);
+
+	&:last-child {
+		padding-bottom: 0;
+		border-bottom: 0;
+	}
+}
+
+.hive-events__date {
+	display: grid;
+	flex: 0 0 4rem;
+	place-content: center;
+	height: 4rem;
+	border-radius: 12px;
+	background: var(--hive-events-accent);
+	color: #fff;
+	line-height: 1.1;
+	text-align: center;
+}
+
+.hive-events__day {
+	font-size: 1.5em;
+	font-weight: 700;
+}
+
+.hive-events__month {
+	font-size: 0.8em;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+.hive-events__body {
+	display: grid;
+	gap: 0.35rem;
+
+	p {
+		margin: 0;
+	}
+}
+
+.hive-events__title {
+	margin: 0;
+	font-size: 1.15em;
+
+	a {
+		color: inherit;
+		text-decoration: none;
+
+		&:hover,
+		&:focus-visible {
+			text-decoration: underline;
+		}
+	}
+}
+
+.hive-events__meta {
+	color: var(--hive-events-muted);
+	font-size: 0.9em;
+}
+
+.hive-events__ics {
+	justify-self: start;
+	font-size: 0.9em;
+	font-weight: 600;
+}

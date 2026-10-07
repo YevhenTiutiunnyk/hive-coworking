@@ -1,0 +1,31 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "hive/plan-comparison",
+	"version": "0.1.0",
+	"title": "Plan Comparison",
+	"category": "widgets",
+	"icon": "tickets-alt",
+	"description": "Membership plans side by side, with a monthly / yearly switch.",
+	"keywords": [ "pricing", "plans", "membership" ],
+	"textdomain": "hive-core",
+	"attributes": {
+		"ctaUrl": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"supports": {
+		"html": false,
+		"interactivity": true,
+		"align": [ "wide", "full" ],
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css",
+	"viewScriptModule": "file:./view.js",
+	"render": "file:./render.php"
+}

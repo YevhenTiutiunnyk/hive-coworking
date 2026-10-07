@@ -12,10 +12,8 @@ use Hive\Core\Content\PostTypes;
  */
 final class SpaceFinder {
 
-	/*
-	 * Not "hive_location" or "hive_amenity": those are the query vars of the post type and
-	 * taxonomy, and WordPress would treat them as a request for a location or amenity archive.
-	 */
+	// Not "hive_location" or "hive_amenity": those are the query vars of the post type and
+	// taxonomy, and WordPress would treat them as a request for a location or amenity archive.
 	public const PARAM_PREFIX   = 'space_';
 	public const PARAM_LOCATION = 'space_location';
 	public const PARAM_TYPE     = 'space_type';
