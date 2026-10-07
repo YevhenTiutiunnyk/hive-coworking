@@ -59,4 +59,68 @@ Booking keeps working if the theme is switched.
 - Bookings live in a custom table rather than posts so overlap checks are fast,
   indexed queries. The schema is versioned and migrated with `dbDelta`.
 
+## Features
+
+### 1. Booking (core feature)
+
+- Block `hive/booking-widget` on a space page. The user picks a date; the block calls
+  `GET /hive/v1/spaces/{id}/availability?date=YYYY-MM-DD` and shows free slots
+  (slot length from settings, default 60 min) within the location's opening hours.
+- The user selects a start and end slot; the block calls `POST /hive/v1/bookings`.
+- Server-side validation, in this order:
+  1. user has `hive_book_spaces`; valid REST nonce;
+  2. start is in the future and at least *minimum notice* from now;
+  3. start/end fall inside opening hours and on slot boundaries;
+  4. duration does not exceed *maximum duration*;
+  5. no overlap with another `confirmed` booking of the same space
+     (`existing.start < new.end AND existing.end > new.start`).
+  Overlap check and insert run inside one transaction.
+- Bookings are confirmed immediately (no payments).
+- The owner can cancel via `PATCH /hive/v1/bookings/{id}` with `status=cancelled`,
+  until *cancellation window* hours before start. Managers can cancel any booking anytime.
+- Guests see availability, but the book button is replaced by "Log in to book".
+
+### 2. Space finder
+
+- Block `hive/space-finder`: filters by location, type, minimum capacity, amenities.
+- Interactivity API + Interactivity Router: filters are written to the URL
+  (`?location=…&type=…&capacity=…&amenity[]=…`), the result list is rendered on the
+  server and swapped without a full reload. URLs are shareable and crawlable.
+
+### 3. Other blocks
+
+- `hive/plan-comparison`: pricing table built from `hive_plan`, monthly/yearly toggle.
+- `hive/upcoming-events`: next events with an "Add to calendar" link that downloads an
+  `.ics` file (`GET /hive/v1/events/{id}/ics`).
+- `hive/my-bookings`: account area with upcoming and past bookings and a cancel button.
+
+### 4. Users and capabilities
+
+- Role `hive_member` with capability `hive_book_spaces`; new registrations get this role.
+- Administrators get `hive_book_spaces` and `hive_manage_bookings`.
+- Every REST route has an explicit `permission_callback`.
+
+### 5. Admin
+
+- "Bookings" screen built on `WP_List_Table`: filter by location and status,
+  bulk cancel, CSV export.
+- Dashboard widget "Today's bookings" with occupancy per location.
+- Settings page (Settings API): slot length, minimum notice, maximum duration,
+  cancellation window.
+
+### 6. WP-CLI
+
+- `wp hive seed`: demo content (3 locations, ~12 spaces, plans, events, a demo member
+  with bookings). Idempotent; the Playground blueprint uses the same seeding code.
+- `wp hive bookings list [--date=<date>] [--format=<format>]`.
+
+### 7. Email
+
+- Booking confirmation and cancellation emails via `wp_mail` with an HTML template.
+  In Playground mail is silently not delivered, which is acceptable.
+
+### Out of scope
+
+Payments, maps, event registration, recurring bookings.
+
 <!-- Next sections (features, REST API, blocks, account area, admin, testing) are added as they are approved. -->
