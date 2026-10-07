@@ -1,6 +1,7 @@
 <?php
 namespace Hive\Core;
 
+use Hive\Core\Bookings\Schema;
 use Hive\Core\Content\PostTypes;
 
 /**
@@ -13,6 +14,7 @@ final class Activation {
 	 */
 	public static function activate(): void {
 		Roles::install();
+		Schema::install();
 
 		// Post types must exist before rewrite rules are flushed.
 		PostTypes::register_all();

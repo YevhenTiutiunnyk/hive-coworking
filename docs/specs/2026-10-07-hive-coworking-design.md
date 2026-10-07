@@ -74,7 +74,10 @@ Booking keeps working if the theme is switched.
   4. duration does not exceed *maximum duration*;
   5. no overlap with another `confirmed` booking of the same space
      (`existing.start < new.end AND existing.end > new.start`).
-  Overlap check and insert run inside one transaction.
+  The overlap check and insert run under a per-space lock (an atomic `INSERT IGNORE` into
+  the options table, the same technique core uses for its upgrader lock). This works on both
+  MySQL and SQLite, so it also protects the Playground demo; a transaction alone would not
+  stop two concurrent requests under MySQL's default isolation level.
 - Bookings are confirmed immediately (no payments).
 - The owner can cancel via `PATCH /hive/v1/bookings/{id}` with `status=cancelled`,
   until *cancellation window* hours before start. Managers can cancel any booking anytime.

@@ -10,6 +10,7 @@ final class Plugin {
 	 * Registers all hooks. Runs on `plugins_loaded`.
 	 */
 	public static function boot(): void {
+		Bookings\Schema::maybe_upgrade();
 		Content\PostTypes::register_hooks();
 		Content\Meta::register_hooks();
 		Roles::register_hooks();
