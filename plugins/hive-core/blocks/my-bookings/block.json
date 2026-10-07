@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "hive/my-bookings",
+	"version": "0.1.0",
+	"title": "My Bookings",
+	"category": "widgets",
+	"icon": "id-alt",
+	"description": "The logged-in member's upcoming and past bookings, with cancellation.",
+	"keywords": [ "account", "bookings", "member" ],
+	"textdomain": "hive-core",
+	"supports": {
+		"html": false,
+		"interactivity": true,
+		"align": [ "wide" ],
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css",
+	"viewScriptModule": "file:./view.js",
+	"render": "file:./render.php"
+}
