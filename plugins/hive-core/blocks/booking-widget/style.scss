@@ -25,6 +25,8 @@
 	padding: 0.5rem 0.75rem;
 	border: 1px solid var(--hive-booking-border);
 	border-radius: var(--hive-booking-radius);
+	background: var(--wp--preset--color--base, #fff);
+	color: inherit;
 	font: inherit;
 }
 

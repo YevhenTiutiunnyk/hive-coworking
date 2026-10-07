@@ -298,6 +298,25 @@ final class DemoContent {
 	}
 
 	/**
+	 * Pages keyed by slug. Content uses the plugin's blocks and, when the Hive theme is active, its patterns.
+	 *
+	 * @return array<string, array{title: string, content: string}>
+	 */
+	public static function pages(): array {
+		return array(
+			'pricing' => array(
+				'title'   => 'Pricing',
+				'content' => self::paragraphs( 'Book any space by the hour without a plan, or become a member for included hours, 24/7 access and a lower hourly rate.' )
+					. "\n\n<!-- wp:hive/plan-comparison {\"align\":\"wide\"} /-->\n\n<!-- wp:pattern {\"slug\":\"hive/faq\"} /-->",
+			),
+			'account' => array(
+				'title'   => 'My bookings',
+				'content' => '<!-- wp:hive/my-bookings /-->',
+			),
+		);
+	}
+
+	/**
 	 * Block markup for a few paragraphs.
 	 *
 	 * @param string ...$paragraphs Paragraph texts.

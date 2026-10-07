@@ -18,6 +18,8 @@ final class SeederTest extends TestCase {
 		$this->assertSame( 12, $counts['spaces'] );
 		$this->assertSame( 3, $counts['plans'] );
 		$this->assertSame( 4, $counts['events'] );
+		$this->assertSame( 2, $counts['pages'] );
+		$this->assertStringContainsString( 'wp:hive/my-bookings', get_page_by_path( 'account' )->post_content );
 		$this->assertCount( 12, ( new SpaceCatalog() )->all(), 'Every space is bookable.' );
 		$this->assertNotEmpty(
 			get_terms(

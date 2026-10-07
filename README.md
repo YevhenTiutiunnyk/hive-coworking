@@ -11,7 +11,7 @@ Interactivity API.
 | Path | What it is |
 |---|---|
 | `plugins/hive-core` | Plugin with all data and business logic (post types, bookings, REST API) |
-| `themes/hive` | Block theme, presentation only (coming soon) |
+| `themes/hive` | Block theme: templates, patterns, `theme.json`, Night Shift dark variation |
 | `docs/specs` | Design spec |
 
 ## Development

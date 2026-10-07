@@ -7,7 +7,7 @@
 :root {
 	--hive-honeycomb: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='98' viewBox='0 0 56 98'%3E%3Cpath d='M28 66L0 50V18L28 2l28 16v32L28 66zm0 32L0 82V66l28 16 28-16v16L28 98z' fill='none' stroke='%23E8A317' stroke-opacity='.35' stroke-width='1.2'/%3E%3C/svg%3E");
 	--hive-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-	--hive-hexagon: polygon(25% 3%, 75% 3%, 100% 50%, 75% 97%, 25% 97%, 0% 50%);
+	--hive-hexagon: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 }
 
 /* Paper grain over the whole page. */
@@ -53,6 +53,11 @@ body::before {
 	}
 }
 
+.hive-header .wp-block-site-title,
+.hive-header .wp-block-button__link {
+	white-space: nowrap;
+}
+
 /* Hexagon mark before the site title. */
 .wp-block-site-title a {
 	display: inline-flex;
@@ -63,7 +68,7 @@ body::before {
 .wp-block-site-title a::before {
 	content: "";
 	width: 1.05em;
-	aspect-ratio: 1 / 0.9;
+	aspect-ratio: 1 / 0.866;
 	background: var(--wp--preset--color--accent);
 	clip-path: var(--hive-hexagon);
 }
@@ -84,7 +89,7 @@ body::before {
 .hive-eyebrow::before {
 	content: "";
 	width: 0.7em;
-	aspect-ratio: 1 / 0.9;
+	aspect-ratio: 1 / 0.866;
 	background: currentcolor;
 	clip-path: var(--hive-hexagon);
 }
@@ -119,33 +124,37 @@ body::before {
 
 .hive-hero__art .hive-cell {
 	position: absolute;
-	width: 46%;
-	aspect-ratio: 1 / 0.9;
+	width: 37%;
+	aspect-ratio: 1 / 0.866;
 	clip-path: var(--hive-hexagon);
 }
 
+/*
+ * Four flat-topped hexagons in a honeycomb: neighbours sit 3/4 of a width
+ * across and half a height up or down, with a small gap.
+ */
 .hive-cell--1 {
-	top: 6%;
-	left: 26%;
+	top: 17%;
+	left: 29.25%;
 	background: var(--wp--preset--color--accent);
 }
 
 .hive-cell--2 {
-	top: 29%;
+	top: 34%;
 	left: 0;
 	background: var(--wp--preset--color--contrast);
 }
 
 .hive-cell--3 {
-	top: 29%;
-	left: 52%;
+	top: 34%;
+	left: 58.5%;
 	background: var(--wp--preset--color--base-2) var(--hive-honeycomb);
 	background-size: 30px auto;
 }
 
 .hive-cell--4 {
-	top: 52%;
-	left: 26%;
+	top: 51%;
+	left: 29.25%;
 	background: var(--wp--preset--color--accent-2);
 }
 
@@ -350,4 +359,23 @@ body::before {
 	.hive-card:hover {
 		transform: none;
 	}
+}
+
+/* Steps ------------------------------------------------------------------- */
+
+.hive-step__number {
+	display: grid;
+	width: 3.25rem;
+	aspect-ratio: 1 / 0.866;
+	place-content: center;
+	background: var(--wp--preset--color--accent);
+	color: var(--wp--preset--color--accent-contrast);
+	font-family: var(--wp--preset--font-family--display);
+	font-size: var(--wp--preset--font-size--large);
+	font-weight: 600;
+	clip-path: var(--hive-hexagon);
+}
+
+.hive-hero .wp-block-column:last-child {
+	position: relative;
 }

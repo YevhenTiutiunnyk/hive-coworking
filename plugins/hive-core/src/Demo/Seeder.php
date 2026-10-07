@@ -29,7 +29,7 @@ final class Seeder {
 	 *
 	 * @param DateTimeImmutable $now           Current time; events and bookings are placed relative to it.
 	 * @param string|null       $demo_password Password for the demo member; random when null.
-	 * @return array{amenities: int, locations: int, spaces: int, plans: int, events: int, members: int, bookings: int}
+	 * @return array{amenities: int, locations: int, spaces: int, plans: int, events: int, pages: int, members: int, bookings: int}
 	 */
 	public function run( DateTimeImmutable $now, ?string $demo_password = null ): array {
 		return array(
@@ -38,6 +38,7 @@ final class Seeder {
 			'spaces'    => $this->seed_spaces(),
 			'plans'     => $this->seed_plans(),
 			'events'    => $this->seed_events( $now ),
+			'pages'     => $this->seed_pages(),
 			'members'   => $this->seed_member( $demo_password ),
 			'bookings'  => $this->seed_bookings( $now ),
 		);
@@ -169,6 +170,26 @@ final class Seeder {
 						Meta::EVENT_LOCATION => $this->ids[ $event['location'] ],
 						Meta::EVENT_CAPACITY => $event['capacity'],
 					),
+				)
+			);
+		}
+
+		return $created;
+	}
+
+	/**
+	 * Creates the Pricing and My bookings pages.
+	 */
+	private function seed_pages(): int {
+		$created = 0;
+
+		foreach ( DemoContent::pages() as $slug => $page ) {
+			$created += $this->ensure_post(
+				'page',
+				$slug,
+				array(
+					'post_title'   => $page['title'],
+					'post_content' => $page['content'],
 				)
 			);
 		}
