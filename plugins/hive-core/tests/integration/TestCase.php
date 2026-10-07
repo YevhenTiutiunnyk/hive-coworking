@@ -39,13 +39,14 @@ abstract class TestCase extends WP_UnitTestCase {
 			)
 		);
 
+		$space_args['meta_input'] = array_merge( array( Meta::SPACE_LOCATION => $location ), $space_args['meta_input'] ?? array() );
+
 		return self::factory()->post->create(
 			array_merge(
 				array(
 					'post_type'   => PostTypes::SPACE,
 					'post_status' => 'publish',
 					'post_title'  => 'Room Atlas',
-					'meta_input'  => array( Meta::SPACE_LOCATION => $location ),
 				),
 				$space_args
 			)

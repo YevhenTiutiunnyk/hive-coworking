@@ -1,0 +1,119 @@
+.hive-booking {
+	--hive-booking-accent: var(--wp--preset--color--accent, #c98a00);
+	--hive-booking-border: var(--wp--preset--color--contrast-3, #d6d3cc);
+	--hive-booking-muted: var(--wp--preset--color--contrast-2, #6b6760);
+	--hive-booking-radius: 8px;
+
+	display: grid;
+	gap: 1rem;
+	padding: 1.5rem;
+	border: 1px solid var(--hive-booking-border);
+	border-radius: calc(var(--hive-booking-radius) * 2);
+}
+
+.hive-booking__header {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+}
+
+.hive-booking__label {
+	font-weight: 600;
+}
+
+.hive-booking__date {
+	padding: 0.5rem 0.75rem;
+	border: 1px solid var(--hive-booking-border);
+	border-radius: var(--hive-booking-radius);
+	font: inherit;
+}
+
+.hive-booking__slots {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(5.5rem, 1fr));
+	gap: 0.5rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	&[aria-busy="true"] {
+		opacity: 0.5;
+	}
+}
+
+.hive-booking__slot {
+	width: 100%;
+	padding: 0.6rem 0.5rem;
+	border: 1px solid var(--hive-booking-border);
+	border-radius: var(--hive-booking-radius);
+	background: transparent;
+	color: inherit;
+	font: inherit;
+	font-variant-numeric: tabular-nums;
+	cursor: pointer;
+	transition: background-color 0.15s, border-color 0.15s;
+
+	&:hover:not(:disabled) {
+		border-color: var(--hive-booking-accent);
+	}
+
+	&:focus-visible {
+		outline: 2px solid var(--hive-booking-accent);
+		outline-offset: 2px;
+	}
+
+	&.is-selected {
+		border-color: var(--hive-booking-accent);
+		background: var(--hive-booking-accent);
+		color: #fff;
+	}
+
+	&:disabled {
+		color: var(--hive-booking-muted);
+		text-decoration: line-through;
+		cursor: not-allowed;
+		opacity: 0.6;
+	}
+}
+
+.hive-booking__footer {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+.hive-booking__summary,
+.hive-booking__closed,
+.hive-booking__note,
+.hive-booking__message {
+	margin: 0;
+}
+
+.hive-booking__submit:disabled {
+	cursor: not-allowed;
+	opacity: 0.5;
+}
+
+.hive-booking__message {
+
+	&:empty {
+		display: none;
+	}
+
+	&.is-error {
+		color: #b32d2e;
+	}
+
+	&.is-success {
+		color: #1a7f37;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+	.hive-booking__slot {
+		transition: none;
+	}
+}

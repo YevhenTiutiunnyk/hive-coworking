@@ -16,11 +16,12 @@ Interactivity API.
 
 ## Development
 
-Requirements: PHP 8.1+, Composer, Node.js 20+, Docker.
+Requirements: PHP 8.1+, Composer, Node.js 20+, Docker. The plugin needs WordPress 6.8+.
 
 ```bash
 composer install
 npm install
+npm run build
 npm run env:start   # WordPress at http://localhost:8888 (admin / password)
 npx wp-env run cli wp hive seed   # demo locations, spaces, plans, events and bookings
 ```
@@ -34,6 +35,9 @@ WP-CLI commands:
 
 | Command | What it does |
 |---|---|
+| `npm run build` / `npm start` | Build the blocks once / watch for changes |
+| `npm run test:js` | Vitest unit tests for block logic |
+| `npm run lint:js` / `npm run lint:css` | ESLint / Stylelint via `@wordpress/scripts` |
 | `composer test:unit` | Unit tests for pure domain code (no WordPress, runs on the host) |
 | `npm run test:php` | Integration tests inside the wp-env tests container |
 | `composer lint` | PHPCS with WordPress Coding Standards |

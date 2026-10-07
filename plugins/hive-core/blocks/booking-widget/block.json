@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "hive/booking-widget",
+	"version": "0.1.0",
+	"title": "Space Booking",
+	"category": "widgets",
+	"icon": "calendar-alt",
+	"description": "Lets members pick a date and time slots, then book a space.",
+	"keywords": [ "booking", "reserve", "calendar", "slots" ],
+	"textdomain": "hive-core",
+	"attributes": {
+		"spaceId": {
+			"type": "integer",
+			"default": 0
+		}
+	},
+	"usesContext": [ "postId", "postType" ],
+	"supports": {
+		"html": false,
+		"interactivity": true,
+		"align": [ "wide" ],
+		"color": {
+			"background": true,
+			"text": true
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css",
+	"viewScriptModule": "file:./view.js",
+	"render": "file:./render.php"
+}

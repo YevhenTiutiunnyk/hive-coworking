@@ -4,7 +4,7 @@
  * Plugin URI:        https://github.com/YevhenTiutiunnyk/hive-coworking
  * Description:       Locations, spaces, plans, events and room booking for Hive Coworking.
  * Version:           0.1.0
- * Requires at least: 6.7
+ * Requires at least: 6.8
  * Requires PHP:      8.1
  * Author:            Yevhen Tiutiunnyk
  * License:           GPL-2.0-or-later

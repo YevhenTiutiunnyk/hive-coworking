@@ -20,7 +20,7 @@ Native WordPress stack:
 - Plugin `hive-core` holds all data and business logic.
 - Custom blocks in React via `@wordpress/scripts`.
 - Front-end interactivity (booking, filters) through the Interactivity API,
-  backed by the plugin's own REST API.
+  backed by the plugin's own REST API. Requires WordPress 6.8+ (`withSyncEvent`).
 - Local development via `wp-env` (Docker); PHPUnit and Playwright tests;
   GitHub Actions CI; Playground blueprint for the demo.
 
