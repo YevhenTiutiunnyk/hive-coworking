@@ -4,6 +4,8 @@ namespace Hive\Core\Tests\Integration;
 use Hive\Core\Plugin;
 use PO;
 
+// phpcs:disable WordPress.WP.I18n.MissingTranslatorsComment -- Tests look up existing strings; they are not new translatable text.
+
 /**
  * The bundled Russian translation loads and covers every string.
  */
