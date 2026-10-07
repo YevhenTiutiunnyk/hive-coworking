@@ -33,4 +33,31 @@ final class SpaceCatalog {
 			OpeningHours::from_meta( get_post_meta( $location_id, Meta::LOCATION_HOURS, true ), wp_timezone() )
 		);
 	}
+
+	/**
+	 * All bookable spaces, ordered by title.
+	 *
+	 * @return list<Space>
+	 */
+	public function all(): array {
+		$posts = get_posts(
+			array(
+				'post_type'   => PostTypes::SPACE,
+				'post_status' => 'publish',
+				'numberposts' => -1,
+				'orderby'     => 'title',
+				'order'       => 'ASC',
+			)
+		);
+
+		$spaces = array();
+		foreach ( $posts as $post ) {
+			$space = $this->find( $post->ID );
+			if ( null !== $space ) {
+				$spaces[] = $space;
+			}
+		}
+
+		return $spaces;
+	}
 }
