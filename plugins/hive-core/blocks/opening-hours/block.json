@@ -1,26 +1,32 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "hive/space-finder",
+	"name": "hive/opening-hours",
 	"version": "0.1.0",
-	"title": "Space Finder",
+	"title": "Opening Hours",
 	"category": "widgets",
-	"icon": "search",
-	"description": "Lists spaces with filters for location, type, capacity and amenities.",
-	"keywords": [ "spaces", "rooms", "filter", "search" ],
+	"icon": "clock",
+	"description": "Weekly opening hours of a location, with today highlighted. On a space, shows its location's hours.",
+	"keywords": [ "hours", "open", "schedule" ],
 	"textdomain": "hive-core",
+	"attributes": {
+		"locationId": {
+			"type": "integer",
+			"default": 0
+		}
+	},
 	"usesContext": [ "postId", "postType" ],
 	"supports": {
 		"html": false,
-		"interactivity": true,
-		"align": [ "wide", "full" ],
 		"spacing": {
 			"margin": true,
 			"padding": true
+		},
+		"typography": {
+			"fontSize": true
 		}
 	},
 	"editorScript": "file:./index.js",
 	"style": "file:./style-index.css",
-	"viewScriptModule": "file:./view.js",
 	"render": "file:./render.php"
 }

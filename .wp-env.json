@@ -7,7 +7,8 @@
   "config": {
     "WP_DEBUG": true,
     "WP_DEBUG_LOG": true,
-    "SCRIPT_DEBUG": true
+    "SCRIPT_DEBUG": true,
+    "WP_DEVELOPMENT_MODE": "all"
   },
   "env": {
     "development": {

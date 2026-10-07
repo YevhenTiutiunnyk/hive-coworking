@@ -11,7 +11,7 @@
     "build": "wp-scripts build --webpack-src-dir=plugins/hive-core/blocks --output-path=plugins/hive-core/build --experimental-modules",
     "start": "wp-scripts start --webpack-src-dir=plugins/hive-core/blocks --output-path=plugins/hive-core/build --experimental-modules",
     "lint:js": "wp-scripts lint-js plugins/hive-core/blocks",
-    "lint:css": "wp-scripts lint-style \"plugins/hive-core/blocks/**/*.scss\"",
+    "lint:css": "wp-scripts lint-style \"plugins/hive-core/blocks/**/*.scss\" \"themes/hive/assets/css/*.css\"",
     "test:js": "wp-scripts test-unit-js plugins/hive-core/blocks",
     "env:start": "wp-env start",
     "env:stop": "wp-env stop",

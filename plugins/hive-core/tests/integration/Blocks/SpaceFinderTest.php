@@ -127,6 +127,31 @@ final class SpaceFinderTest extends TestCase {
 		$this->assertTrue( is_page( $page ) );
 	}
 
+	public function test_location_pages_lock_the_location_filter(): void {
+		$filters = SpaceFinder::with_context(
+			SpaceFinder::empty_filters(),
+			array(
+				'postType' => PostTypes::LOCATION,
+				'postId'   => $this->old_town,
+			)
+		);
+
+		$this->assertSame( $this->old_town, $filters['location'] );
+		$this->assertSame( array( 'Desk', 'Office' ), $this->titles( $filters ) );
+	}
+
+	public function test_other_pages_keep_the_requested_location(): void {
+		$filters = SpaceFinder::with_context(
+			array( 'location' => $this->harbour ) + SpaceFinder::empty_filters(),
+			array(
+				'postType' => 'page',
+				'postId'   => 5,
+			)
+		);
+
+		$this->assertSame( $this->harbour, $filters['location'] );
+	}
+
 	public function test_type_labels_are_human_readable(): void {
 		$this->assertSame( 'Meeting room', SpaceFinder::type_label( 'meeting_room' ) );
 		$this->assertSame( 'Hot desk', SpaceFinder::type_label( 'hot_desk' ) );

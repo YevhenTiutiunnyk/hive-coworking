@@ -1,0 +1,32 @@
+.hive-hours__table {
+	width: 100%;
+	border-collapse: collapse;
+	font-variant-numeric: tabular-nums;
+
+	caption {
+		margin-bottom: 0.5rem;
+		font-weight: 600;
+		text-align: left;
+	}
+
+	th,
+	td {
+		padding: 0.45rem 0;
+		border-bottom: 1px solid var(--wp--preset--color--contrast-3, #ddd3c2);
+		font-weight: 400;
+		text-align: left;
+	}
+
+	td {
+		text-align: right;
+	}
+
+	.is-today {
+
+		th,
+		td {
+			color: var(--wp--preset--color--accent-2, #8a5300);
+			font-weight: 600;
+		}
+	}
+}

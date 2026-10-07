@@ -15,6 +15,7 @@ final class Plugin {
 		Content\Meta::register_hooks();
 		Roles::register_hooks();
 		Blocks\Blocks::register_hooks();
+		Blocks\Bindings::register_hooks();
 
 		if ( is_admin() ) {
 			Admin\SettingsPage::register_hooks();

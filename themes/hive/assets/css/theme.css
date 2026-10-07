@@ -1,6 +1,7 @@
 /**
  * Hive theme details that theme.json cannot express.
- * Colours come from the palette, so the Night Shift variation applies automatically.
+ * Colours come from the palette, so the Night Shift variation
+ * applies automatically.
  */
 
 :root {
@@ -46,6 +47,7 @@ body::before {
 }
 
 @media (max-width: 600px) {
+
 	.admin-bar .hive-header {
 		top: 0;
 	}
@@ -186,15 +188,34 @@ body::before {
 	border-radius: var(--wp--custom--radius--medium) var(--wp--custom--radius--medium) 0 0;
 }
 
-/* Spaces and locations without a photo get a honeycomb illustration. */
+/* Spaces, locations and events without a photo get a honeycomb illustration. */
 .hive-finder__image:empty,
-.hive-card .hive-placeholder {
-	background: var(--wp--preset--color--base-2) var(--hive-honeycomb);
-	background-size: 36px auto;
+.hive-placeholder {
+	background:
+		radial-gradient(circle at 72% 28%, color-mix(in srgb, var(--wp--preset--color--accent) 55%, transparent), transparent 55%),
+		var(--hive-honeycomb),
+		var(--wp--preset--color--base-2);
+	background-size: auto, 36px auto, auto;
 }
 
 .hive-placeholder {
+	align-self: stretch;
+	width: 100%;
 	aspect-ratio: 4 / 3;
+	border-radius: var(--wp--custom--radius--medium);
+}
+
+.hive-card .hive-placeholder {
+	border-radius: var(--wp--custom--radius--medium) var(--wp--custom--radius--medium) 0 0;
+}
+
+.hive-facts .wp-block-post-terms__separator {
+	display: none;
+}
+
+.hive-facts > a {
+	color: inherit;
+	text-decoration: none;
 }
 
 .hive-facts {
@@ -269,6 +290,7 @@ body::before {
 /* Motion ------------------------------------------------------------------ */
 
 @keyframes hive-rise {
+
 	from {
 		opacity: 0;
 		translate: 0 1.25rem;
@@ -276,6 +298,7 @@ body::before {
 }
 
 @media (prefers-reduced-motion: no-preference) {
+
 	.hive-hero__copy > * {
 		animation: hive-rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 	}
@@ -309,6 +332,7 @@ body::before {
 	}
 
 	@supports (animation-timeline: view()) {
+
 		.hive-reveal {
 			animation: hive-rise linear both;
 			animation-timeline: view();
@@ -318,6 +342,7 @@ body::before {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
 	.hive-card {
 		transition: none;
 	}

@@ -5,6 +5,7 @@
  * @package Hive\Core
  *
  * @var array<string, mixed> $attributes Block attributes.
+ * @var WP_Block             $block      Block instance.
  */
 
 use Hive\Core\Blocks\SpaceFinder;
@@ -15,9 +16,10 @@ use Hive\Core\Content\PostTypes;
 $hive_query_vars = wp_unslash( $_GET );
 // phpcs:enable
 
-$hive_filters   = SpaceFinder::filters_from_request( $hive_query_vars );
-$hive_spaces    = new WP_Query( SpaceFinder::query_args( $hive_filters ) );
-$hive_locations = get_posts(
+$hive_filters     = SpaceFinder::with_context( SpaceFinder::filters_from_request( $hive_query_vars ), $block->context );
+$hive_on_location = 'hive_location' === ( $block->context['postType'] ?? '' );
+$hive_spaces      = new WP_Query( SpaceFinder::query_args( $hive_filters ) );
+$hive_locations   = get_posts(
 	array(
 		'post_type'   => PostTypes::LOCATION,
 		'numberposts' => -1,
@@ -25,13 +27,13 @@ $hive_locations = get_posts(
 		'order'       => 'ASC',
 	)
 );
-$hive_amenities = get_terms(
+$hive_amenities   = get_terms(
 	array(
 		'taxonomy'   => PostTypes::AMENITY,
 		'hide_empty' => true,
 	)
 );
-$hive_id        = wp_unique_id( 'hive-finder-' );
+$hive_id          = wp_unique_id( 'hive-finder-' );
 ?>
 <div
 	<?php echo get_block_wrapper_attributes( array( 'class' => 'hive-finder' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Escaped by core. ?>
@@ -51,6 +53,7 @@ $hive_id        = wp_unique_id( 'hive-finder-' );
 		endforeach;
 		?>
 
+		<?php if ( ! $hive_on_location ) : ?>
 		<div class="hive-finder__field">
 			<label for="<?php echo esc_attr( $hive_id ); ?>-location"><?php esc_html_e( 'Location', 'hive-core' ); ?></label>
 			<select id="<?php echo esc_attr( $hive_id ); ?>-location" name="<?php echo esc_attr( SpaceFinder::PARAM_LOCATION ); ?>" data-wp-on--change="actions.change">
@@ -60,6 +63,7 @@ $hive_id        = wp_unique_id( 'hive-finder-' );
 				<?php endforeach; ?>
 			</select>
 		</div>
+		<?php endif; ?>
 
 		<div class="hive-finder__field">
 			<label for="<?php echo esc_attr( $hive_id ); ?>-type"><?php esc_html_e( 'Type', 'hive-core' ); ?></label>

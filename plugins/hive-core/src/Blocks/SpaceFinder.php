@@ -56,6 +56,21 @@ final class SpaceFinder {
 	}
 
 	/**
+	 * Locks the location filter on a location page, where the block lists that location's spaces.
+	 *
+	 * @param array{location: int, type: string, capacity: int, amenities: list<string>} $filters Filters.
+	 * @param array<string, mixed>                                                       $context Block context.
+	 * @return array{location: int, type: string, capacity: int, amenities: list<string>}
+	 */
+	public static function with_context( array $filters, array $context ): array {
+		if ( PostTypes::LOCATION === ( $context['postType'] ?? '' ) ) {
+			$filters['location'] = (int) ( $context['postId'] ?? 0 );
+		}
+
+		return $filters;
+	}
+
+	/**
 	 * WP_Query arguments for the filters.
 	 *
 	 * @param array{location: int, type: string, capacity: int, amenities: list<string>} $filters Filters.
