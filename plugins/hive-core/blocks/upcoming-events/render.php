@@ -37,7 +37,7 @@ $hive_time   = get_option( 'time_format' );
 							<?php
 							echo esc_html(
 								sprintf(
-									/* translators: 1: weekday, 2: start time, 3: end time. */
+									/* translators: 1: date, 2: start time, 3: end time. */
 									__( '%1$s, %2$s–%3$s', 'hive-core' ),
 									wp_date( 'l', $hive_event->start->getTimestamp() ),
 									wp_date( $hive_time, $hive_event->start->getTimestamp() ),

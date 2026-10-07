@@ -24,12 +24,27 @@ final class Plugin {
 			Admin\DashboardWidget::register_hooks();
 		}
 
+		add_action( 'init', array( self::class, 'load_textdomain' ) );
 		add_action( 'rest_api_init', array( self::class, 'register_rest_routes' ) );
 
 		if ( defined( 'WP_CLI' ) && WP_CLI ) {
 			\WP_CLI::add_command( 'hive', Cli\HiveCommand::class );
 			\WP_CLI::add_command( 'hive bookings', Cli\BookingsCommand::class );
 		}
+	}
+
+	/**
+	 * Loads the bundled translations from /languages.
+	 */
+	public static function load_textdomain(): void {
+		load_plugin_textdomain( 'hive-core', false, basename( self::path() ) . '/languages' );
+	}
+
+	/**
+	 * Absolute path of the plugin directory, without a trailing slash.
+	 */
+	public static function path(): string {
+		return dirname( __DIR__ );
 	}
 
 	/**

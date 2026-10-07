@@ -1,0 +1,621 @@
+# Copyright (C) 2026 Yevhen Tiutiunnyk
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Project-Id-Version: Hive 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/hive\n"
+"Last-Translator: Yevhen Tiutiunnyk\n"
+"Language-Team: Russian\n"
+"MIME-Version: 1.0\n"
+"Language: ru_RU\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-07T18:26:45+00:00\n"
+"PO-Revision-Date: 2026-10-07\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: hive\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "Hive"
+msgstr "Hive"
+
+#. Theme URI of the theme
+#: style.css
+msgid "https://github.com/YevhenTiutiunnyk/hive-coworking"
+msgstr "https://github.com/YevhenTiutiunnyk/hive-coworking"
+
+#. Description of the theme
+#: style.css
+msgid "A warm, editorial block theme for Hive Coworking. Pairs with the Hive Core plugin, which provides the booking, space finder, pricing and events blocks."
+msgstr "Тёплая блочная тема в журнальном стиле для Hive Coworking. Работает в паре с плагином Hive Core, который добавляет блоки бронирования, поиска пространств, тарифов и событий."
+
+#. Author of the theme
+#: style.css
+msgid "Yevhen Tiutiunnyk"
+msgstr "Yevhen Tiutiunnyk"
+
+#: functions.php:34
+msgid "Hive Coworking"
+msgstr "Hive Coworking"
+
+#: patterns/404.php
+msgctxt "Pattern title"
+msgid "Page not found"
+msgstr "Страница не найдена"
+
+#: patterns/404.php:14
+msgid "Error 404"
+msgstr "Ошибка 404"
+
+#: patterns/404.php:17
+msgid "This room is empty."
+msgstr "Здесь пусто."
+
+#: patterns/404.php:20
+msgid "The page you were looking for has moved or never existed. Plenty of other rooms are free, though."
+msgstr "Страница переехала или никогда не существовала. Зато много других комнат свободно."
+
+#: patterns/404.php:25
+#: patterns/footer.php:49
+#: patterns/hero.php:38
+msgid "Find a space"
+msgstr "Найти пространство"
+
+#: patterns/cta.php
+msgctxt "Pattern title"
+msgid "Call to action"
+msgstr "Призыв к действию"
+
+#: patterns/cta.php
+msgctxt "Pattern description"
+msgid "A dark band with a headline and a button."
+msgstr "Полоса с заголовком и кнопкой."
+
+#: patterns/cta.php:17
+msgid "Your desk is waiting."
+msgstr "Ваш стол уже ждёт."
+
+#: patterns/cta.php:22
+msgid "Book a space"
+msgstr "Забронировать"
+
+#: patterns/events-section.php
+msgctxt "Pattern title"
+msgid "Events section"
+msgstr "Раздел событий"
+
+#: patterns/events-section.php
+msgctxt "Pattern description"
+msgid "Heading, the next three events and a link to all events."
+msgstr "Заголовок, три ближайших события и ссылка на все события."
+
+#: patterns/events-section.php:19
+msgid "Community"
+msgstr "Сообщество"
+
+#: patterns/events-section.php:22
+msgid "Coming up"
+msgstr "Скоро"
+
+#: patterns/events-section.php:25
+msgid "Breakfasts, meetups and evenings with people from all three locations. Add any event to your calendar in one click."
+msgstr "Завтраки, митапы и вечера с участниками всех трёх локаций. Любое событие добавляется в календарь в один клик."
+
+#: patterns/events-section.php:28
+msgid "All events →"
+msgstr "Все события →"
+
+#: patterns/faq.php
+msgctxt "Pattern title"
+msgid "Frequently asked questions"
+msgstr "Частые вопросы"
+
+#: patterns/faq.php
+msgctxt "Pattern description"
+msgid "Questions and answers in expandable rows."
+msgstr "Вопросы и ответы в раскрывающихся строках."
+
+#: patterns/faq.php:15
+msgid "Questions, answered"
+msgstr "Вопросы и ответы"
+
+#: patterns/faq.php:18
+msgid "Do I need a membership to book a room?"
+msgstr "Нужно ли членство, чтобы забронировать комнату?"
+
+#: patterns/faq.php:20
+msgid "No. Anyone with an account can book by the hour. Members get included hours and a lower rate."
+msgstr "Нет. Почасово может бронировать любой, у кого есть аккаунт. Участники получают включённые часы и сниженную цену."
+
+#: patterns/faq.php:25
+msgid "How far ahead can I book?"
+msgstr "За сколько можно бронировать?"
+
+#: patterns/faq.php:27
+msgid "Up to sixty days ahead, from one hour before the start time."
+msgstr "До шестидесяти дней вперёд и не позднее чем за час до начала."
+
+#: patterns/faq.php:32
+msgid "Can I cancel a booking?"
+msgstr "Можно ли отменить бронь?"
+
+#: patterns/faq.php:34
+msgid "Yes, from My bookings, up to two hours before it starts. After that, contact the front desk."
+msgstr "Да, в разделе «Мои брони», не позднее чем за два часа до начала. Позже — через ресепшен."
+
+#: patterns/faq.php:39
+msgid "Is there coffee?"
+msgstr "А кофе есть?"
+
+#: patterns/faq.php:41
+msgid "Always. Free coffee and tea at every location, and a kitchen you can use."
+msgstr "Всегда. Бесплатные кофе и чай в каждой локации, а ещё кухня."
+
+#: patterns/footer.php
+msgctxt "Pattern title"
+msgid "Footer"
+msgstr "Подвал"
+
+#: patterns/footer.php:21
+msgid "Three calm, well-run coworking spaces with rooms you can book by the hour. Fast Wi-Fi, good coffee and people who like their work."
+msgstr "Три спокойных, хорошо организованных коворкинга с комнатами, которые можно бронировать по часам. Быстрый Wi-Fi, хороший кофе и люди, которые любят свою работу."
+
+#: patterns/footer.php:29
+#: patterns/header.php:23
+#: patterns/locations.php:19
+#: patterns/template-archive-location.php:16
+msgid "Locations"
+msgstr "Локации"
+
+#: patterns/footer.php:44
+msgid "Explore"
+msgstr "Разделы"
+
+#: patterns/footer.php:52
+msgid "Membership plans"
+msgstr "Тарифы"
+
+#: patterns/footer.php:55
+#: patterns/header.php:25
+#: patterns/template-archive-event.php:16
+msgid "Events"
+msgstr "События"
+
+#: patterns/footer.php:58
+#: patterns/header.php:31
+msgid "My bookings"
+msgstr "Мои брони"
+
+#. translators: %s: link to the source code.
+#: patterns/footer.php:76
+#, php-format
+msgid "Hive Coworking is a fictional company. This site is a WordPress portfolio project — %s."
+msgstr "Hive Coworking — вымышленная компания. Этот сайт — проект для портфолио на WordPress: %s."
+
+#: patterns/footer.php:77
+msgid "view the source on GitHub"
+msgstr "исходный код на GitHub"
+
+#: patterns/header.php
+msgctxt "Pattern title"
+msgid "Header"
+msgstr "Шапка"
+
+#: patterns/header.php:22
+#: patterns/template-archive-space.php:16
+msgid "Spaces"
+msgstr "Пространства"
+
+#: patterns/header.php:24
+msgid "Pricing"
+msgstr "Цены"
+
+#: patterns/hero.php
+msgctxt "Pattern title"
+msgid "Hero with honeycomb"
+msgstr "Первый экран с сотами"
+
+#: patterns/hero.php
+msgctxt "Pattern description"
+msgid "Headline, two buttons and the honeycomb illustration."
+msgstr "Заголовок, две кнопки и иллюстрация с сотами."
+
+#: patterns/hero.php:19
+msgid "Coworking in three neighbourhoods"
+msgstr "Коворкинг в трёх районах города"
+
+#. translators: The <em> part is highlighted.
+#: patterns/hero.php:26
+msgid "Book a room. <em>Do your best work.</em>"
+msgstr "Бронируйте комнату. <em>Работайте в полную силу.</em>"
+
+#: patterns/hero.php:33
+msgid "Meeting rooms, private offices and hot desks you can book by the hour. See what is free, pick your slots and you are done in under a minute."
+msgstr "Переговорные, отдельные офисы и свободные места с почасовой бронью. Смотрите, что свободно, выбирайте время — меньше минуты, и готово."
+
+#: patterns/hero.php:41
+msgid "See membership plans"
+msgstr "Посмотреть тарифы"
+
+#: patterns/hero.php:59
+msgid "bookable spaces across 3 locations"
+msgstr "пространств в трёх локациях"
+
+#: patterns/how-it-works.php
+msgctxt "Pattern title"
+msgid "How it works"
+msgstr "Как это работает"
+
+#: patterns/how-it-works.php
+msgctxt "Pattern description"
+msgid "Three numbered steps."
+msgstr "Три пронумерованных шага."
+
+#: patterns/how-it-works.php:15
+msgid "How it works"
+msgstr "Как это работает"
+
+#: patterns/how-it-works.php:18
+msgid "From idea to booked room in a minute"
+msgstr "От идеи до брони за минуту"
+
+#: patterns/how-it-works.php:28
+msgid "Pick a space"
+msgstr "Выберите пространство"
+
+#: patterns/how-it-works.php:31
+msgid "Filter by location, size and what you need in the room: a screen, a whiteboard, daylight."
+msgstr "Фильтруйте по локации, размеру и тому, что нужно в комнате: экран, доска, дневной свет."
+
+#: patterns/how-it-works.php:41
+msgid "Choose your hours"
+msgstr "Выберите время"
+
+#: patterns/how-it-works.php:44
+msgid "Free slots are shown live. Select one or several in a row and see the price straight away."
+msgstr "Свободные слоты видны сразу. Выберите один или несколько подряд — цена посчитается тут же."
+
+#: patterns/how-it-works.php:54
+msgid "Show up and work"
+msgstr "Приходите и работайте"
+
+#: patterns/how-it-works.php:57
+msgid "Your booking is confirmed at once. Plans change? Cancel from your account up to two hours before."
+msgstr "Бронь подтверждается сразу. Планы изменились? Отмените её в аккаунте не позднее чем за два часа."
+
+#: patterns/locations.php
+msgctxt "Pattern title"
+msgid "Locations grid"
+msgstr "Сетка локаций"
+
+#: patterns/locations.php
+msgctxt "Pattern description"
+msgid "All locations as cards with today's opening hours."
+msgstr "Все локации карточками с часами работы на сегодня."
+
+#: patterns/locations.php:22
+#: patterns/template-archive-location.php:19
+msgid "Three places to work"
+msgstr "Три места для работы"
+
+#: patterns/locations.php:27
+msgid "All locations →"
+msgstr "Все локации →"
+
+#: patterns/no-results.php
+msgctxt "Pattern title"
+msgid "No results"
+msgstr "Ничего не найдено"
+
+#: patterns/no-results.php:12
+msgid "Nothing here yet. Try another search, or head back to the homepage."
+msgstr "Здесь пока ничего нет. Попробуйте другой запрос или вернитесь на главную."
+
+#: patterns/no-results.php:14
+msgid "Search"
+msgstr "Поиск"
+
+#: patterns/pricing-section.php
+msgctxt "Pattern title"
+msgid "Pricing section"
+msgstr "Раздел тарифов"
+
+#: patterns/pricing-section.php
+msgctxt "Pattern description"
+msgid "Heading and the plan comparison block."
+msgstr "Заголовок и блок сравнения тарифов."
+
+#: patterns/pricing-section.php:15
+msgid "Membership"
+msgstr "Членство"
+
+#: patterns/pricing-section.php:18
+msgid "Plans that grow with you"
+msgstr "Тарифы, которые растут вместе с вами"
+
+#: patterns/pricing-section.php:21
+msgid "Book by the hour with no plan at all, or become a member for included hours and 24/7 access."
+msgstr "Бронируйте по часам вообще без тарифа или станьте участником — с включёнными часами и доступом 24/7."
+
+#: patterns/template-archive-event.php
+msgctxt "Pattern title"
+msgid "Events archive"
+msgstr "Архив событий"
+
+#: patterns/template-archive-event.php:19
+msgid "What's on"
+msgstr "Афиша"
+
+#: patterns/template-archive-event.php:22
+msgid "Breakfasts, meetups and evenings with the community. Members and guests welcome."
+msgstr "Завтраки, митапы и вечера с сообществом. Ждём и участников, и гостей."
+
+#: patterns/template-archive-location.php
+msgctxt "Pattern title"
+msgid "Locations archive"
+msgstr "Архив локаций"
+
+#: patterns/template-archive-location.php:22
+msgid "A converted warehouse on the water, a quiet library above a clockmaker's shop and a greenhouse full of plants."
+msgstr "Перестроенный склад у воды, тихая библиотека над часовой мастерской и оранжерея, полная растений."
+
+#: patterns/template-archive-space.php
+msgctxt "Pattern title"
+msgid "Spaces archive"
+msgstr "Архив пространств"
+
+#: patterns/template-archive-space.php:19
+msgid "Find your space"
+msgstr "Найдите своё пространство"
+
+#: patterns/template-archive-space.php:22
+msgid "Meeting rooms, private offices and hot desks across three locations. Filter by what you need, then book by the hour."
+msgstr "Переговорные, отдельные офисы и свободные места в трёх локациях. Отфильтруйте по своим нуждам и бронируйте по часам."
+
+#: patterns/template-front-page.php
+msgctxt "Pattern title"
+msgid "Front page"
+msgstr "Главная страница"
+
+#: patterns/template-single-event.php
+msgctxt "Pattern title"
+msgid "Single event"
+msgstr "Событие"
+
+#: patterns/template-single-event.php:14
+msgid "Event"
+msgstr "Событие"
+
+#: patterns/template-single-event.php:30
+msgid "Add to calendar"
+msgstr "Добавить в календарь"
+
+#: patterns/template-single-event.php:38
+msgid "← All events"
+msgstr "← Все события"
+
+#: patterns/template-single-location.php
+msgctxt "Pattern title"
+msgid "Single location"
+msgstr "Локация"
+
+#: patterns/template-single-location.php:16
+msgid "Location"
+msgstr "Локация"
+
+#: patterns/template-single-location.php:48
+msgid "Events here"
+msgstr "События здесь"
+
+#: patterns/template-single-location.php:59
+msgid "Spaces at this location"
+msgstr "Пространства в этой локации"
+
+#: patterns/template-single-space.php
+msgctxt "Pattern title"
+msgid "Single space"
+msgstr "Пространство"
+
+#: patterns/template-single-space.php:46
+msgid "Amenities"
+msgstr "Удобства"
+
+#: patterns/template-single-space.php:57
+msgid "Book this space"
+msgstr "Забронировать пространство"
+
+#: patterns/testimonials.php
+msgctxt "Pattern title"
+msgid "Testimonials"
+msgstr "Отзывы"
+
+#: patterns/testimonials.php
+msgctxt "Pattern description"
+msgid "Three member quotes on a honeycomb band."
+msgstr "Три цитаты участников на фоне сот."
+
+#: patterns/testimonials.php:15
+msgid "What members say"
+msgstr "Что говорят участники"
+
+#: patterns/testimonials.php:24
+msgid "I book the Lighthouse Room for client workshops. It takes thirty seconds and the screen always works."
+msgstr "Бронирую Lighthouse Room для воркшопов с клиентами. Тридцать секунд — и экран всегда работает."
+
+#: patterns/testimonials.php:27
+msgid "Maya, product designer"
+msgstr "Майя, продуктовый дизайнер"
+
+#: patterns/testimonials.php:38
+msgid "The Old Town reading room is the only place I can write for four hours straight."
+msgstr "Читальный зал в Old Town — единственное место, где я могу писать четыре часа подряд."
+
+#: patterns/testimonials.php:41
+msgid "Tomás, freelance journalist"
+msgstr "Томас, журналист-фрилансер"
+
+#: patterns/testimonials.php:52
+msgid "We moved our team of three into the Terrace Office. Hourly booking let us try it before committing."
+msgstr "Мы переехали втроём в Terrace Office. Почасовая бронь позволила сначала попробовать."
+
+#: patterns/testimonials.php:55
+msgid "Ines, startup founder"
+msgstr "Инес, основательница стартапа"
+
+#: theme.json
+#: styles/night-shift.json
+msgctxt "Color name"
+msgid "Paper"
+msgstr "Бумага"
+
+#: theme.json
+#: styles/night-shift.json
+msgctxt "Color name"
+msgid "Paper Shade"
+msgstr "Тень бумаги"
+
+#: theme.json
+#: styles/night-shift.json
+msgctxt "Color name"
+msgid "Ink"
+msgstr "Чернила"
+
+#: theme.json
+#: styles/night-shift.json
+msgctxt "Color name"
+msgid "Ink Soft"
+msgstr "Мягкие чернила"
+
+#: theme.json
+#: styles/night-shift.json
+msgctxt "Color name"
+msgid "Line"
+msgstr "Линия"
+
+#: theme.json
+#: styles/night-shift.json
+msgctxt "Color name"
+msgid "Honey"
+msgstr "Мёд"
+
+#: theme.json
+#: styles/night-shift.json
+msgctxt "Color name"
+msgid "Amber"
+msgstr "Янтарь"
+
+#: theme.json
+#: styles/night-shift.json
+msgctxt "Color name"
+msgid "Text on Honey"
+msgstr "Текст на мёде"
+
+#: theme.json
+#: styles/night-shift.json
+msgctxt "Color name"
+msgid "Error"
+msgstr "Ошибка"
+
+#: theme.json
+#: styles/night-shift.json
+msgctxt "Color name"
+msgid "Success"
+msgstr "Успех"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "XS"
+msgstr "XS"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "S"
+msgstr "S"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "M"
+msgstr "M"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "L"
+msgstr "L"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "XL"
+msgstr "XL"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "XXL"
+msgstr "XXL"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Literata"
+msgstr "Literata"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Onest"
+msgstr "Onest"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr "Маленький"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Medium"
+msgstr "Средний"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Large"
+msgstr "Крупный"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Extra Large"
+msgstr "Очень крупный"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Huge"
+msgstr "Огромный"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Display"
+msgstr "Заголовочный"
+
+#: theme.json
+#: styles/night-shift.json
+msgctxt "Shadow name"
+msgid "Soft"
+msgstr "Мягкая"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header"
+msgstr "Шапка"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer"
+msgstr "Подвал"
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Page (wide, no title)"
+msgstr "Страница (широкая, без заголовка)"
+
+#: styles/night-shift.json
+msgctxt "Style variation name"
+msgid "Night Shift"
+msgstr "Ночная смена"

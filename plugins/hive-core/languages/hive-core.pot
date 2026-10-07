@@ -1,0 +1,955 @@
+# Copyright (C) 2026 Yevhen Tiutiunnyk
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Hive Core 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/hive-core\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-07T18:26:43+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: hive-core\n"
+
+#. Plugin Name of the plugin
+#: hive-core.php
+msgid "Hive Core"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: hive-core.php
+msgid "https://github.com/YevhenTiutiunnyk/hive-coworking"
+msgstr ""
+
+#. Description of the plugin
+#: hive-core.php
+msgid "Locations, spaces, plans, events and room booking for Hive Coworking."
+msgstr ""
+
+#. Author of the plugin
+#: hive-core.php
+msgid "Yevhen Tiutiunnyk"
+msgstr ""
+
+#: build/booking-widget/render.php:36
+#: templates/emails/booking.php:17
+msgid "Date"
+msgstr ""
+
+#: build/booking-widget/render.php:50
+#: src/Blocks/BookingWidget.php:97
+msgid "Closed on this day."
+msgstr ""
+
+#: build/booking-widget/render.php:55
+msgid "Time slots"
+msgstr ""
+
+#: build/booking-widget/render.php:78
+msgid "Log in to book"
+msgstr ""
+
+#: build/booking-widget/render.php:88
+msgid "Book"
+msgstr ""
+
+#: build/booking-widget/render.php:91
+msgid "Your account cannot book spaces."
+msgstr ""
+
+#: build/my-bookings/render.php:19
+msgid "Your bookings appear here once you are logged in."
+msgstr ""
+
+#: build/my-bookings/render.php:21
+msgid "Log in"
+msgstr ""
+
+#: build/my-bookings/render.php:36
+msgid "Bookings to show"
+msgstr ""
+
+#: build/my-bookings/render.php:38
+#: src/Admin/BookingsListTable.php:189
+msgid "Upcoming"
+msgstr ""
+
+#: build/my-bookings/render.php:41
+#: src/Admin/BookingsListTable.php:190
+msgid "Past"
+msgstr ""
+
+#: build/my-bookings/render.php:63
+#: src/Admin/BookingsListTable.php:78
+#: src/Admin/BookingsListTable.php:116
+msgid "Cancel"
+msgstr ""
+
+#: build/my-bookings/render.php:83
+msgid "You have no upcoming bookings."
+msgstr ""
+
+#: build/my-bookings/render.php:85
+msgid "Find a space"
+msgstr ""
+
+#: build/my-bookings/render.php:89
+msgid "No past bookings yet."
+msgstr ""
+
+#: build/opening-hours/render.php:24
+msgid "Opening hours"
+msgstr ""
+
+#: build/plan-comparison/render.php:35
+msgid "Billing period"
+msgstr ""
+
+#: build/plan-comparison/render.php:37
+msgid "Monthly"
+msgstr ""
+
+#: build/plan-comparison/render.php:40
+msgid "Yearly"
+msgstr ""
+
+#. translators: %d: percentage.
+#: build/plan-comparison/render.php:45
+#, php-format
+msgid "Save up to %d%%"
+msgstr ""
+
+#: build/plan-comparison/render.php:56
+msgid "Most popular"
+msgstr ""
+
+#. translators: %s: price.
+#: build/plan-comparison/render.php:68
+#, php-format
+msgid "%s / month"
+msgstr ""
+
+#. translators: %s: price.
+#: build/plan-comparison/render.php:74
+#, php-format
+msgid "%s / year"
+msgstr ""
+
+#. translators: %s: plan name.
+#: build/plan-comparison/render.php:90
+#, php-format
+msgid "Choose %s"
+msgstr ""
+
+#: build/space-finder/render.php:44
+msgid "Filter spaces"
+msgstr ""
+
+#: build/space-finder/render.php:58
+#: src/Admin/BookingsCsv.php:21
+#: src/Admin/BookingsListTable.php:49
+#: src/Admin/DashboardWidget.php:46
+#: src/Content/PostTypes.php:31
+#: templates/emails/booking.php:16
+#: build/upcoming-events/index.js:1
+msgid "Location"
+msgstr ""
+
+#: build/space-finder/render.php:60
+#: src/Admin/BookingsListTable.php:203
+#: build/upcoming-events/index.js:1
+msgid "All locations"
+msgstr ""
+
+#: build/space-finder/render.php:69
+msgid "Type"
+msgstr ""
+
+#: build/space-finder/render.php:71
+msgid "Any type"
+msgstr ""
+
+#: build/space-finder/render.php:79
+msgid "People"
+msgstr ""
+
+#: build/space-finder/render.php:88
+msgid "Any"
+msgstr ""
+
+#: build/space-finder/render.php:95
+#: build/space-finder/render.php:159
+#: src/Content/PostTypes.php:123
+msgid "Amenities"
+msgstr ""
+
+#: build/space-finder/render.php:112
+msgid "Apply filters"
+msgstr ""
+
+#. translators: %d: number of spaces.
+#: build/space-finder/render.php:120
+#, php-format
+msgid "%d space found"
+msgid_plural "%d spaces found"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of people, 2: price such as €40.
+#: build/space-finder/render.php:151
+#, php-format
+msgid "Up to %1$d person · %2$s / hour"
+msgid_plural "Up to %1$d people · %2$s / hour"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/space-finder/render.php:170
+msgid "No spaces match these filters. Try removing some of them."
+msgstr ""
+
+#: build/upcoming-events/render.php:25
+msgid "No upcoming events. Check back soon."
+msgstr ""
+
+#. translators: 1: date, 2: start time, 3: end time.
+#: build/upcoming-events/render.php:41
+#: src/Admin/BookingsListTable.php:151
+#: src/Blocks/Bindings.php:156
+#, php-format
+msgid "%1$s, %2$s–%3$s"
+msgstr ""
+
+#: build/upcoming-events/render.php:56
+msgid "Add to calendar"
+msgstr ""
+
+#. translators: %s: event title.
+#: build/upcoming-events/render.php:60
+#, php-format
+msgid "(%s)"
+msgstr ""
+
+#: src/Admin/BookingsCsv.php:19
+msgid "ID"
+msgstr ""
+
+#: src/Admin/BookingsCsv.php:20
+#: src/Admin/BookingsListTable.php:48
+#: src/Content/PostTypes.php:54
+#: templates/emails/booking.php:15
+#: build/booking-widget/index.js:1
+msgid "Space"
+msgstr ""
+
+#: src/Admin/BookingsCsv.php:22
+#: src/Admin/BookingsListTable.php:50
+msgid "Member"
+msgstr ""
+
+#: src/Admin/BookingsCsv.php:23
+msgid "Email"
+msgstr ""
+
+#: src/Admin/BookingsCsv.php:24
+msgid "Start"
+msgstr ""
+
+#: src/Admin/BookingsCsv.php:25
+msgid "End"
+msgstr ""
+
+#: src/Admin/BookingsCsv.php:26
+#: src/Admin/BookingsListTable.php:52
+msgid "Status"
+msgstr ""
+
+#: src/Admin/BookingsCsv.php:27
+msgid "Created"
+msgstr ""
+
+#: src/Admin/BookingsListTable.php:51
+#: templates/emails/booking.php:18
+msgid "Time"
+msgstr ""
+
+#: src/Admin/BookingsListTable.php:85
+msgid "No bookings found."
+msgstr ""
+
+#: src/Admin/BookingsListTable.php:160
+#: src/Admin/BookingsListTable.php:197
+#: src/Blocks/MyBookings.php:106
+msgid "Confirmed"
+msgstr ""
+
+#: src/Admin/BookingsListTable.php:161
+#: src/Admin/BookingsListTable.php:198
+#: src/Blocks/MyBookings.php:57
+#: src/Blocks/MyBookings.php:106
+msgid "Cancelled"
+msgstr ""
+
+#: src/Admin/BookingsListTable.php:187
+msgid "Filter by time"
+msgstr ""
+
+#: src/Admin/BookingsListTable.php:191
+msgid "All dates"
+msgstr ""
+
+#: src/Admin/BookingsListTable.php:194
+msgid "Filter by status"
+msgstr ""
+
+#: src/Admin/BookingsListTable.php:196
+msgid "All statuses"
+msgstr ""
+
+#: src/Admin/BookingsListTable.php:201
+msgid "Filter by location"
+msgstr ""
+
+#: src/Admin/BookingsListTable.php:209
+msgid "Filter"
+msgstr ""
+
+#: src/Admin/BookingsListTable.php:211
+msgid "Export CSV"
+msgstr ""
+
+#: src/Admin/BookingsPage.php:33
+#: src/Admin/BookingsPage.php:34
+#: src/Admin/BookingsPage.php:138
+#: src/Admin/DashboardWidget.php:47
+msgid "Bookings"
+msgstr ""
+
+#. translators: %d: number of bookings.
+#: src/Admin/BookingsPage.php:144
+#, php-format
+msgid "%d booking cancelled."
+msgid_plural "%d bookings cancelled."
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/Admin/BookingsPage.php:162
+msgid "You are not allowed to export bookings."
+msgstr ""
+
+#: src/Admin/DashboardWidget.php:26
+msgid "Bookings today"
+msgstr ""
+
+#: src/Admin/DashboardWidget.php:39
+msgid "No bookable spaces yet."
+msgstr ""
+
+#: src/Admin/DashboardWidget.php:48
+msgid "Occupancy"
+msgstr ""
+
+#: src/Admin/DashboardWidget.php:60
+#: src/Blocks/OpeningHoursTable.php:46
+msgid "Closed"
+msgstr ""
+
+#: src/Admin/DashboardWidget.php:69
+msgid "View all bookings"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:54
+#: src/Admin/SettingsPage.php:55
+#: src/Blocks/Bindings.php:35
+msgid "Hive Coworking"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:68
+msgid "Booking rules"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:70
+msgid "These limits apply to every space and are enforced by the booking API."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:77
+msgid "Slot length"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:85
+msgid "Minimum notice"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:85
+msgid "minutes before the start"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:86
+msgid "Maximum duration"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:86
+msgid "minutes per booking"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:87
+msgid "Cancellation deadline"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:87
+msgid "hours before the start; managers can always cancel"
+msgstr ""
+
+#. translators: %d: number of minutes.
+#: src/Admin/SettingsPage.php:140
+#, php-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: number of people.
+#: src/Blocks/Bindings.php:94
+#, php-format
+msgid "Up to %d person"
+msgid_plural "Up to %d people"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: price such as €40.
+#: src/Blocks/Bindings.php:98
+#, php-format
+msgid "%s / hour"
+msgstr ""
+
+#: src/Blocks/Bindings.php:127
+msgid "Closed today"
+msgstr ""
+
+#. translators: 1: opening time, 2: closing time.
+#: src/Blocks/Bindings.php:130
+#, php-format
+msgid "Open today %1$s–%2$s"
+msgstr ""
+
+#: src/Blocks/Bindings.php:157
+msgctxt "event date"
+msgid "l j F"
+msgstr ""
+
+#. translators: 1: space name, 2: date, 3: start time, 4: end time.
+#: src/Blocks/BookingWidget.php:95
+#, php-format
+msgid "Booked: %1$s on %2$s, %3$s–%4$s."
+msgstr ""
+
+#: src/Blocks/BookingWidget.php:96
+#: src/Blocks/MyBookings.php:58
+msgid "Something went wrong. Please try again."
+msgstr ""
+
+#. translators: 1: start time, 2: end time, 3: number of hours.
+#: src/Blocks/BookingWidget.php:99
+#, php-format
+msgid "%1$s–%2$s · %3$s h"
+msgstr ""
+
+#: src/Blocks/BookingWidget.php:100
+msgid "Select one or more consecutive slots."
+msgstr ""
+
+#: src/Blocks/MyBookings.php:55
+msgid "Cancel this booking?"
+msgstr ""
+
+#: src/Blocks/MyBookings.php:56
+msgid "Booking cancelled."
+msgstr ""
+
+#. translators: 1: date, 2: start time, 3: end time.
+#: src/Blocks/MyBookings.php:100
+#, php-format
+msgid "%1$s · %2$s–%3$s"
+msgstr ""
+
+#: src/Blocks/SpaceFinder.php:141
+msgid "Meeting room"
+msgstr ""
+
+#: src/Blocks/SpaceFinder.php:142
+msgid "Private office"
+msgstr ""
+
+#: src/Blocks/SpaceFinder.php:143
+msgid "Hot desk"
+msgstr ""
+
+#: src/Content/PostTypes.php:30
+msgid "Locations"
+msgstr ""
+
+#: src/Content/PostTypes.php:32
+msgid "Add New Location"
+msgstr ""
+
+#: src/Content/PostTypes.php:33
+msgid "Edit Location"
+msgstr ""
+
+#: src/Content/PostTypes.php:34
+msgid "View Location"
+msgstr ""
+
+#: src/Content/PostTypes.php:35
+msgid "All Locations"
+msgstr ""
+
+#: src/Content/PostTypes.php:36
+msgid "Search Locations"
+msgstr ""
+
+#: src/Content/PostTypes.php:37
+msgid "No locations found."
+msgstr ""
+
+#: src/Content/PostTypes.php:53
+msgid "Spaces"
+msgstr ""
+
+#: src/Content/PostTypes.php:55
+msgid "Add New Space"
+msgstr ""
+
+#: src/Content/PostTypes.php:56
+msgid "Edit Space"
+msgstr ""
+
+#: src/Content/PostTypes.php:57
+msgid "View Space"
+msgstr ""
+
+#: src/Content/PostTypes.php:58
+msgid "All Spaces"
+msgstr ""
+
+#: src/Content/PostTypes.php:59
+msgid "Search Spaces"
+msgstr ""
+
+#: src/Content/PostTypes.php:60
+msgid "No spaces found."
+msgstr ""
+
+#: src/Content/PostTypes.php:76
+msgid "Plans"
+msgstr ""
+
+#: src/Content/PostTypes.php:77
+msgid "Plan"
+msgstr ""
+
+#: src/Content/PostTypes.php:78
+msgid "Add New Plan"
+msgstr ""
+
+#: src/Content/PostTypes.php:79
+msgid "Edit Plan"
+msgstr ""
+
+#: src/Content/PostTypes.php:80
+msgid "All Plans"
+msgstr ""
+
+#: src/Content/PostTypes.php:81
+msgid "Search Plans"
+msgstr ""
+
+#: src/Content/PostTypes.php:82
+msgid "No plans found."
+msgstr ""
+
+#: src/Content/PostTypes.php:99
+#: build/upcoming-events/index.js:1
+msgid "Events"
+msgstr ""
+
+#: src/Content/PostTypes.php:100
+msgid "Event"
+msgstr ""
+
+#: src/Content/PostTypes.php:101
+msgid "Add New Event"
+msgstr ""
+
+#: src/Content/PostTypes.php:102
+msgid "Edit Event"
+msgstr ""
+
+#: src/Content/PostTypes.php:103
+msgid "View Event"
+msgstr ""
+
+#: src/Content/PostTypes.php:104
+msgid "All Events"
+msgstr ""
+
+#: src/Content/PostTypes.php:105
+msgid "Search Events"
+msgstr ""
+
+#: src/Content/PostTypes.php:106
+msgid "No events found."
+msgstr ""
+
+#: src/Content/PostTypes.php:124
+msgid "Amenity"
+msgstr ""
+
+#: src/Content/PostTypes.php:125
+msgid "Add New Amenity"
+msgstr ""
+
+#: src/Content/PostTypes.php:126
+msgid "Edit Amenity"
+msgstr ""
+
+#: src/Content/PostTypes.php:127
+msgid "All Amenities"
+msgstr ""
+
+#: src/Content/PostTypes.php:128
+msgid "Search Amenities"
+msgstr ""
+
+#: src/Content/PostTypes.php:129
+msgid "No amenities found."
+msgstr ""
+
+#: src/Events/EventsController.php:58
+msgid "Event not found."
+msgstr ""
+
+#. translators: 1: space name, 2: date.
+#: src/Notifications/BookingMailer.php:78
+#, php-format
+msgid "Booking confirmed: %1$s, %2$s"
+msgstr ""
+
+#. translators: 1: space name, 2: date.
+#: src/Notifications/BookingMailer.php:80
+#, php-format
+msgid "Booking cancelled: %1$s, %2$s"
+msgstr ""
+
+#: src/Notifications/BookingMailer.php:132
+msgctxt "email date"
+msgid "l j F Y"
+msgstr ""
+
+#: src/Rest/AvailabilityController.php:45
+msgid "Local date in the site timezone (YYYY-MM-DD)."
+msgstr ""
+
+#: src/Rest/AvailabilityController.php:67
+msgid "Invalid date."
+msgstr ""
+
+#: src/Rest/BookingsController.php:98
+msgid "Only cancellation is supported."
+msgstr ""
+
+#: src/Rest/BookingsController.php:118
+msgid "You need to log in."
+msgstr ""
+
+#: src/Rest/BookingsController.php:134
+msgid "You are not allowed to book spaces."
+msgstr ""
+
+#: src/Rest/BookingsController.php:160
+msgid "Invalid start or end time."
+msgstr ""
+
+#: src/Rest/Errors.php:19
+msgid "The end time must be after the start time."
+msgstr ""
+
+#: src/Rest/Errors.php:20
+msgid "This time is too soon to book. Please choose a later slot."
+msgstr ""
+
+#: src/Rest/Errors.php:21
+msgid "This booking is longer than the maximum allowed."
+msgstr ""
+
+#: src/Rest/Errors.php:22
+msgid "The location is closed at this time."
+msgstr ""
+
+#: src/Rest/Errors.php:23
+msgid "Bookings must start and end on a slot boundary."
+msgstr ""
+
+#: src/Rest/Errors.php:24
+msgid "This space is already booked for part of that time."
+msgstr ""
+
+#: src/Rest/Errors.php:25
+msgid "It is too late to cancel this booking."
+msgstr ""
+
+#: src/Rest/Errors.php:26
+msgid "This booking has already been cancelled."
+msgstr ""
+
+#: src/Rest/Errors.php:27
+msgid "Space not found."
+msgstr ""
+
+#: src/Rest/Errors.php:28
+msgid "Another booking for this space is being processed. Please try again."
+msgstr ""
+
+#: src/Rest/Errors.php:29
+msgid "The booking could not be processed."
+msgstr ""
+
+#: src/Rest/Errors.php:39
+msgid "Booking not found."
+msgstr ""
+
+#: templates/emails/booking.php:21
+msgid "Price"
+msgstr ""
+
+#: templates/emails/booking.php:44
+msgid "Your booking is confirmed"
+msgstr ""
+
+#: templates/emails/booking.php:44
+msgid "Your booking was cancelled"
+msgstr ""
+
+#. translators: %s: member name.
+#: templates/emails/booking.php:49
+#, php-format
+msgid "Hi %s,"
+msgstr ""
+
+#: templates/emails/booking.php:53
+msgid "your room is booked. Here are the details."
+msgstr ""
+
+#: templates/emails/booking.php:54
+msgid "this booking has been cancelled and the room is free again."
+msgstr ""
+
+#: templates/emails/booking.php:68
+msgid "View my bookings"
+msgstr ""
+
+#: build/booking-widget/index.js:1
+msgid "Current space"
+msgstr ""
+
+#: build/booking-widget/index.js:1
+msgid "Select a space"
+msgstr ""
+
+#: build/booking-widget/index.js:1
+msgid "Space to book"
+msgstr ""
+
+#: build/booking-widget/index.js:1
+msgid "Space Booking"
+msgstr ""
+
+#: build/booking-widget/index.js:1
+msgid "Shows the booking form for the space being viewed."
+msgstr ""
+
+#: build/booking-widget/index.js:1
+msgid "Choose a space in the block settings."
+msgstr ""
+
+#: build/opening-hours/index.js:1
+msgid "Opening Hours"
+msgstr ""
+
+#: build/opening-hours/index.js:1
+msgid "Shows the hours of the location or space being viewed."
+msgstr ""
+
+#: build/plan-comparison/index.js:1
+msgid "Button"
+msgstr ""
+
+#: build/plan-comparison/index.js:1
+msgid "Button link"
+msgstr ""
+
+#: build/plan-comparison/index.js:1
+msgid "Leave empty to link to the account page."
+msgstr ""
+
+#: build/upcoming-events/index.js:1
+msgid "Number of events"
+msgstr ""
+
+#: build/booking-widget/block.json
+msgctxt "block title"
+msgid "Space Booking"
+msgstr ""
+
+#: build/booking-widget/block.json
+msgctxt "block description"
+msgid "Lets members pick a date and time slots, then book a space."
+msgstr ""
+
+#: build/booking-widget/block.json
+msgctxt "block keyword"
+msgid "booking"
+msgstr ""
+
+#: build/booking-widget/block.json
+msgctxt "block keyword"
+msgid "reserve"
+msgstr ""
+
+#: build/booking-widget/block.json
+#: build/upcoming-events/block.json
+msgctxt "block keyword"
+msgid "calendar"
+msgstr ""
+
+#: build/booking-widget/block.json
+msgctxt "block keyword"
+msgid "slots"
+msgstr ""
+
+#: build/my-bookings/block.json
+msgctxt "block title"
+msgid "My Bookings"
+msgstr ""
+
+#: build/my-bookings/block.json
+msgctxt "block description"
+msgid "The logged-in member's upcoming and past bookings, with cancellation."
+msgstr ""
+
+#: build/my-bookings/block.json
+msgctxt "block keyword"
+msgid "account"
+msgstr ""
+
+#: build/my-bookings/block.json
+msgctxt "block keyword"
+msgid "bookings"
+msgstr ""
+
+#: build/my-bookings/block.json
+msgctxt "block keyword"
+msgid "member"
+msgstr ""
+
+#: build/opening-hours/block.json
+msgctxt "block title"
+msgid "Opening Hours"
+msgstr ""
+
+#: build/opening-hours/block.json
+msgctxt "block description"
+msgid "Weekly opening hours of a location, with today highlighted. On a space, shows its location's hours."
+msgstr ""
+
+#: build/opening-hours/block.json
+msgctxt "block keyword"
+msgid "hours"
+msgstr ""
+
+#: build/opening-hours/block.json
+msgctxt "block keyword"
+msgid "open"
+msgstr ""
+
+#: build/opening-hours/block.json
+msgctxt "block keyword"
+msgid "schedule"
+msgstr ""
+
+#: build/plan-comparison/block.json
+msgctxt "block title"
+msgid "Plan Comparison"
+msgstr ""
+
+#: build/plan-comparison/block.json
+msgctxt "block description"
+msgid "Membership plans side by side, with a monthly / yearly switch."
+msgstr ""
+
+#: build/plan-comparison/block.json
+msgctxt "block keyword"
+msgid "pricing"
+msgstr ""
+
+#: build/plan-comparison/block.json
+msgctxt "block keyword"
+msgid "plans"
+msgstr ""
+
+#: build/plan-comparison/block.json
+msgctxt "block keyword"
+msgid "membership"
+msgstr ""
+
+#: build/space-finder/block.json
+msgctxt "block title"
+msgid "Space Finder"
+msgstr ""
+
+#: build/space-finder/block.json
+msgctxt "block description"
+msgid "Lists spaces with filters for location, type, capacity and amenities."
+msgstr ""
+
+#: build/space-finder/block.json
+msgctxt "block keyword"
+msgid "spaces"
+msgstr ""
+
+#: build/space-finder/block.json
+msgctxt "block keyword"
+msgid "rooms"
+msgstr ""
+
+#: build/space-finder/block.json
+msgctxt "block keyword"
+msgid "filter"
+msgstr ""
+
+#: build/space-finder/block.json
+msgctxt "block keyword"
+msgid "search"
+msgstr ""
+
+#: build/upcoming-events/block.json
+msgctxt "block title"
+msgid "Upcoming Events"
+msgstr ""
+
+#: build/upcoming-events/block.json
+msgctxt "block description"
+msgid "The next events, with an Add to calendar link for each."
+msgstr ""
+
+#: build/upcoming-events/block.json
+msgctxt "block keyword"
+msgid "events"
+msgstr ""
+
+#: build/upcoming-events/block.json
+msgctxt "block keyword"
+msgid "meetup"
+msgstr ""

@@ -17,7 +17,8 @@
     "env:stop": "wp-env stop",
     "env:clean": "wp-env clean all",
     "test:unit": "composer test:unit",
-    "test:php": "wp-env run tests-cli --env-cwd=wp-content/hive-dev vendor/bin/phpunit -c plugins/hive-core/phpunit.xml.dist"
+    "test:php": "wp-env run tests-cli --env-cwd=wp-content/hive-dev vendor/bin/phpunit -c plugins/hive-core/phpunit.xml.dist",
+    "i18n": "tools/i18n/build.sh"
   },
   "devDependencies": {
     "@wordpress/block-editor": "^18.1.0",

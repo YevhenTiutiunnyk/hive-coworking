@@ -1,0 +1,962 @@
+# Copyright (C) 2026 Yevhen Tiutiunnyk
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Project-Id-Version: Hive Core 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/hive-core\n"
+"Last-Translator: Yevhen Tiutiunnyk\n"
+"Language-Team: Russian\n"
+"MIME-Version: 1.0\n"
+"Language: ru_RU\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-07T18:26:43+00:00\n"
+"PO-Revision-Date: 2026-10-07\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: hive-core\n"
+
+#. Plugin Name of the plugin
+#: hive-core.php
+msgid "Hive Core"
+msgstr "Hive Core"
+
+#. Plugin URI of the plugin
+#: hive-core.php
+msgid "https://github.com/YevhenTiutiunnyk/hive-coworking"
+msgstr "https://github.com/YevhenTiutiunnyk/hive-coworking"
+
+#. Description of the plugin
+#: hive-core.php
+msgid "Locations, spaces, plans, events and room booking for Hive Coworking."
+msgstr "Локации, пространства, тарифы, события и бронирование переговорных для Hive Coworking."
+
+#. Author of the plugin
+#: hive-core.php
+msgid "Yevhen Tiutiunnyk"
+msgstr "Yevhen Tiutiunnyk"
+
+#: build/booking-widget/render.php:36
+#: templates/emails/booking.php:17
+msgid "Date"
+msgstr "Дата"
+
+#: build/booking-widget/render.php:50
+#: src/Blocks/BookingWidget.php:97
+msgid "Closed on this day."
+msgstr "В этот день закрыто."
+
+#: build/booking-widget/render.php:55
+msgid "Time slots"
+msgstr "Временные слоты"
+
+#: build/booking-widget/render.php:78
+msgid "Log in to book"
+msgstr "Войдите, чтобы забронировать"
+
+#: build/booking-widget/render.php:88
+msgid "Book"
+msgstr "Забронировать"
+
+#: build/booking-widget/render.php:91
+msgid "Your account cannot book spaces."
+msgstr "С вашей учётной записью нельзя бронировать."
+
+#: build/my-bookings/render.php:19
+msgid "Your bookings appear here once you are logged in."
+msgstr "Ваши брони появятся здесь после входа."
+
+#: build/my-bookings/render.php:21
+msgid "Log in"
+msgstr "Войти"
+
+#: build/my-bookings/render.php:36
+msgid "Bookings to show"
+msgstr "Какие брони показать"
+
+#: build/my-bookings/render.php:38
+#: src/Admin/BookingsListTable.php:189
+msgid "Upcoming"
+msgstr "Предстоящие"
+
+#: build/my-bookings/render.php:41
+#: src/Admin/BookingsListTable.php:190
+msgid "Past"
+msgstr "Прошедшие"
+
+#: build/my-bookings/render.php:63
+#: src/Admin/BookingsListTable.php:78
+#: src/Admin/BookingsListTable.php:116
+msgid "Cancel"
+msgstr "Отменить"
+
+#: build/my-bookings/render.php:83
+msgid "You have no upcoming bookings."
+msgstr "У вас нет предстоящих броней."
+
+#: build/my-bookings/render.php:85
+msgid "Find a space"
+msgstr "Найти пространство"
+
+#: build/my-bookings/render.php:89
+msgid "No past bookings yet."
+msgstr "Прошедших броней пока нет."
+
+#: build/opening-hours/render.php:24
+msgid "Opening hours"
+msgstr "Часы работы"
+
+#: build/plan-comparison/render.php:35
+msgid "Billing period"
+msgstr "Период оплаты"
+
+#: build/plan-comparison/render.php:37
+msgid "Monthly"
+msgstr "Помесячно"
+
+#: build/plan-comparison/render.php:40
+msgid "Yearly"
+msgstr "За год"
+
+#. translators: %d: percentage.
+#: build/plan-comparison/render.php:45
+#, php-format
+msgid "Save up to %d%%"
+msgstr "Экономия до %d%%"
+
+#: build/plan-comparison/render.php:56
+msgid "Most popular"
+msgstr "Популярный"
+
+#. translators: %s: price.
+#: build/plan-comparison/render.php:68
+#, php-format
+msgid "%s / month"
+msgstr "%s / месяц"
+
+#. translators: %s: price.
+#: build/plan-comparison/render.php:74
+#, php-format
+msgid "%s / year"
+msgstr "%s / год"
+
+#. translators: %s: plan name.
+#: build/plan-comparison/render.php:90
+#, php-format
+msgid "Choose %s"
+msgstr "Выбрать «%s»"
+
+#: build/space-finder/render.php:44
+msgid "Filter spaces"
+msgstr "Фильтр пространств"
+
+#: build/space-finder/render.php:58
+#: src/Admin/BookingsCsv.php:21
+#: src/Admin/BookingsListTable.php:49
+#: src/Admin/DashboardWidget.php:46
+#: src/Content/PostTypes.php:31
+#: templates/emails/booking.php:16
+#: build/upcoming-events/index.js:1
+msgid "Location"
+msgstr "Локация"
+
+#: build/space-finder/render.php:60
+#: src/Admin/BookingsListTable.php:203
+#: build/upcoming-events/index.js:1
+msgid "All locations"
+msgstr "Все локации"
+
+#: build/space-finder/render.php:69
+msgid "Type"
+msgstr "Тип"
+
+#: build/space-finder/render.php:71
+msgid "Any type"
+msgstr "Любой тип"
+
+#: build/space-finder/render.php:79
+msgid "People"
+msgstr "Человек"
+
+#: build/space-finder/render.php:88
+msgid "Any"
+msgstr "Любое"
+
+#: build/space-finder/render.php:95
+#: build/space-finder/render.php:159
+#: src/Content/PostTypes.php:123
+msgid "Amenities"
+msgstr "Удобства"
+
+#: build/space-finder/render.php:112
+msgid "Apply filters"
+msgstr "Применить"
+
+#. translators: %d: number of spaces.
+#: build/space-finder/render.php:120
+#, php-format
+msgid "%d space found"
+msgid_plural "%d spaces found"
+msgstr[0] "Найдено %d пространство"
+msgstr[1] "Найдено %d пространства"
+msgstr[2] "Найдено %d пространств"
+
+#. translators: 1: number of people, 2: price such as €40.
+#: build/space-finder/render.php:151
+#, php-format
+msgid "Up to %1$d person · %2$s / hour"
+msgid_plural "Up to %1$d people · %2$s / hour"
+msgstr[0] "До %1$d человека · %2$s / час"
+msgstr[1] "До %1$d человек · %2$s / час"
+msgstr[2] "До %1$d человек · %2$s / час"
+
+#: build/space-finder/render.php:170
+msgid "No spaces match these filters. Try removing some of them."
+msgstr "Под эти фильтры ничего не подходит. Попробуйте убрать часть из них."
+
+#: build/upcoming-events/render.php:25
+msgid "No upcoming events. Check back soon."
+msgstr "Ближайших событий нет. Загляните позже."
+
+#. translators: 1: date, 2: start time, 3: end time.
+#: build/upcoming-events/render.php:41
+#: src/Admin/BookingsListTable.php:151
+#: src/Blocks/Bindings.php:156
+#, php-format
+msgid "%1$s, %2$s–%3$s"
+msgstr "%1$s, %2$s–%3$s"
+
+#: build/upcoming-events/render.php:56
+msgid "Add to calendar"
+msgstr "Добавить в календарь"
+
+#. translators: %s: event title.
+#: build/upcoming-events/render.php:60
+#, php-format
+msgid "(%s)"
+msgstr "(%s)"
+
+#: src/Admin/BookingsCsv.php:19
+msgid "ID"
+msgstr "ID"
+
+#: src/Admin/BookingsCsv.php:20
+#: src/Admin/BookingsListTable.php:48
+#: src/Content/PostTypes.php:54
+#: templates/emails/booking.php:15
+#: build/booking-widget/index.js:1
+msgid "Space"
+msgstr "Пространство"
+
+#: src/Admin/BookingsCsv.php:22
+#: src/Admin/BookingsListTable.php:50
+msgid "Member"
+msgstr "Участник"
+
+#: src/Admin/BookingsCsv.php:23
+msgid "Email"
+msgstr "Email"
+
+#: src/Admin/BookingsCsv.php:24
+msgid "Start"
+msgstr "Начало"
+
+#: src/Admin/BookingsCsv.php:25
+msgid "End"
+msgstr "Конец"
+
+#: src/Admin/BookingsCsv.php:26
+#: src/Admin/BookingsListTable.php:52
+msgid "Status"
+msgstr "Статус"
+
+#: src/Admin/BookingsCsv.php:27
+msgid "Created"
+msgstr "Создано"
+
+#: src/Admin/BookingsListTable.php:51
+#: templates/emails/booking.php:18
+msgid "Time"
+msgstr "Время"
+
+#: src/Admin/BookingsListTable.php:85
+msgid "No bookings found."
+msgstr "Броней не найдено."
+
+#: src/Admin/BookingsListTable.php:160
+#: src/Admin/BookingsListTable.php:197
+#: src/Blocks/MyBookings.php:106
+msgid "Confirmed"
+msgstr "Подтверждена"
+
+#: src/Admin/BookingsListTable.php:161
+#: src/Admin/BookingsListTable.php:198
+#: src/Blocks/MyBookings.php:57
+#: src/Blocks/MyBookings.php:106
+msgid "Cancelled"
+msgstr "Отменена"
+
+#: src/Admin/BookingsListTable.php:187
+msgid "Filter by time"
+msgstr "Фильтр по времени"
+
+#: src/Admin/BookingsListTable.php:191
+msgid "All dates"
+msgstr "Все даты"
+
+#: src/Admin/BookingsListTable.php:194
+msgid "Filter by status"
+msgstr "Фильтр по статусу"
+
+#: src/Admin/BookingsListTable.php:196
+msgid "All statuses"
+msgstr "Все статусы"
+
+#: src/Admin/BookingsListTable.php:201
+msgid "Filter by location"
+msgstr "Фильтр по локации"
+
+#: src/Admin/BookingsListTable.php:209
+msgid "Filter"
+msgstr "Фильтровать"
+
+#: src/Admin/BookingsListTable.php:211
+msgid "Export CSV"
+msgstr "Экспорт в CSV"
+
+#: src/Admin/BookingsPage.php:33
+#: src/Admin/BookingsPage.php:34
+#: src/Admin/BookingsPage.php:138
+#: src/Admin/DashboardWidget.php:47
+msgid "Bookings"
+msgstr "Брони"
+
+#. translators: %d: number of bookings.
+#: src/Admin/BookingsPage.php:144
+#, php-format
+msgid "%d booking cancelled."
+msgid_plural "%d bookings cancelled."
+msgstr[0] "Отменена %d бронь."
+msgstr[1] "Отменено %d брони."
+msgstr[2] "Отменено %d броней."
+
+#: src/Admin/BookingsPage.php:162
+msgid "You are not allowed to export bookings."
+msgstr "У вас нет прав на экспорт броней."
+
+#: src/Admin/DashboardWidget.php:26
+msgid "Bookings today"
+msgstr "Брони сегодня"
+
+#: src/Admin/DashboardWidget.php:39
+msgid "No bookable spaces yet."
+msgstr "Пока нет пространств для бронирования."
+
+#: src/Admin/DashboardWidget.php:48
+msgid "Occupancy"
+msgstr "Загрузка"
+
+#: src/Admin/DashboardWidget.php:60
+#: src/Blocks/OpeningHoursTable.php:46
+msgid "Closed"
+msgstr "Закрыто"
+
+#: src/Admin/DashboardWidget.php:69
+msgid "View all bookings"
+msgstr "Все брони"
+
+#: src/Admin/SettingsPage.php:54
+#: src/Admin/SettingsPage.php:55
+#: src/Blocks/Bindings.php:35
+msgid "Hive Coworking"
+msgstr "Hive Coworking"
+
+#: src/Admin/SettingsPage.php:68
+msgid "Booking rules"
+msgstr "Правила бронирования"
+
+#: src/Admin/SettingsPage.php:70
+msgid "These limits apply to every space and are enforced by the booking API."
+msgstr "Эти ограничения действуют для всех пространств и проверяются API бронирования."
+
+#: src/Admin/SettingsPage.php:77
+msgid "Slot length"
+msgstr "Длина слота"
+
+#: src/Admin/SettingsPage.php:85
+msgid "Minimum notice"
+msgstr "Минимум до начала"
+
+#: src/Admin/SettingsPage.php:85
+msgid "minutes before the start"
+msgstr "минут до начала"
+
+#: src/Admin/SettingsPage.php:86
+msgid "Maximum duration"
+msgstr "Максимальная длительность"
+
+#: src/Admin/SettingsPage.php:86
+msgid "minutes per booking"
+msgstr "минут на бронь"
+
+#: src/Admin/SettingsPage.php:87
+msgid "Cancellation deadline"
+msgstr "Срок отмены"
+
+#: src/Admin/SettingsPage.php:87
+msgid "hours before the start; managers can always cancel"
+msgstr "часов до начала; менеджеры могут отменять всегда"
+
+#. translators: %d: number of minutes.
+#: src/Admin/SettingsPage.php:140
+#, php-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d минута"
+msgstr[1] "%d минуты"
+msgstr[2] "%d минут"
+
+#. translators: %d: number of people.
+#: src/Blocks/Bindings.php:94
+#, php-format
+msgid "Up to %d person"
+msgid_plural "Up to %d people"
+msgstr[0] "До %d человека"
+msgstr[1] "До %d человек"
+msgstr[2] "До %d человек"
+
+#. translators: %s: price such as €40.
+#: src/Blocks/Bindings.php:98
+#, php-format
+msgid "%s / hour"
+msgstr "%s / час"
+
+#: src/Blocks/Bindings.php:127
+msgid "Closed today"
+msgstr "Сегодня закрыто"
+
+#. translators: 1: opening time, 2: closing time.
+#: src/Blocks/Bindings.php:130
+#, php-format
+msgid "Open today %1$s–%2$s"
+msgstr "Сегодня открыто %1$s–%2$s"
+
+#: src/Blocks/Bindings.php:157
+msgctxt "event date"
+msgid "l j F"
+msgstr "l, j F"
+
+#. translators: 1: space name, 2: date, 3: start time, 4: end time.
+#: src/Blocks/BookingWidget.php:95
+#, php-format
+msgid "Booked: %1$s on %2$s, %3$s–%4$s."
+msgstr "Забронировано: %1$s, %2$s, %3$s–%4$s."
+
+#: src/Blocks/BookingWidget.php:96
+#: src/Blocks/MyBookings.php:58
+msgid "Something went wrong. Please try again."
+msgstr "Что-то пошло не так. Попробуйте ещё раз."
+
+#. translators: 1: start time, 2: end time, 3: number of hours.
+#: src/Blocks/BookingWidget.php:99
+#, php-format
+msgid "%1$s–%2$s · %3$s h"
+msgstr "%1$s–%2$s · %3$s ч"
+
+#: src/Blocks/BookingWidget.php:100
+msgid "Select one or more consecutive slots."
+msgstr "Выберите один или несколько слотов подряд."
+
+#: src/Blocks/MyBookings.php:55
+msgid "Cancel this booking?"
+msgstr "Отменить эту бронь?"
+
+#: src/Blocks/MyBookings.php:56
+msgid "Booking cancelled."
+msgstr "Бронь отменена."
+
+#. translators: 1: date, 2: start time, 3: end time.
+#: src/Blocks/MyBookings.php:100
+#, php-format
+msgid "%1$s · %2$s–%3$s"
+msgstr "%1$s · %2$s–%3$s"
+
+#: src/Blocks/SpaceFinder.php:141
+msgid "Meeting room"
+msgstr "Переговорная"
+
+#: src/Blocks/SpaceFinder.php:142
+msgid "Private office"
+msgstr "Отдельный офис"
+
+#: src/Blocks/SpaceFinder.php:143
+msgid "Hot desk"
+msgstr "Свободное место"
+
+#: src/Content/PostTypes.php:30
+msgid "Locations"
+msgstr "Локации"
+
+#: src/Content/PostTypes.php:32
+msgid "Add New Location"
+msgstr "Добавить локацию"
+
+#: src/Content/PostTypes.php:33
+msgid "Edit Location"
+msgstr "Редактировать локацию"
+
+#: src/Content/PostTypes.php:34
+msgid "View Location"
+msgstr "Посмотреть локацию"
+
+#: src/Content/PostTypes.php:35
+msgid "All Locations"
+msgstr "Все локации"
+
+#: src/Content/PostTypes.php:36
+msgid "Search Locations"
+msgstr "Искать локации"
+
+#: src/Content/PostTypes.php:37
+msgid "No locations found."
+msgstr "Локаций не найдено."
+
+#: src/Content/PostTypes.php:53
+msgid "Spaces"
+msgstr "Пространства"
+
+#: src/Content/PostTypes.php:55
+msgid "Add New Space"
+msgstr "Добавить пространство"
+
+#: src/Content/PostTypes.php:56
+msgid "Edit Space"
+msgstr "Редактировать пространство"
+
+#: src/Content/PostTypes.php:57
+msgid "View Space"
+msgstr "Посмотреть пространство"
+
+#: src/Content/PostTypes.php:58
+msgid "All Spaces"
+msgstr "Все пространства"
+
+#: src/Content/PostTypes.php:59
+msgid "Search Spaces"
+msgstr "Искать пространства"
+
+#: src/Content/PostTypes.php:60
+msgid "No spaces found."
+msgstr "Пространств не найдено."
+
+#: src/Content/PostTypes.php:76
+msgid "Plans"
+msgstr "Тарифы"
+
+#: src/Content/PostTypes.php:77
+msgid "Plan"
+msgstr "Тариф"
+
+#: src/Content/PostTypes.php:78
+msgid "Add New Plan"
+msgstr "Добавить тариф"
+
+#: src/Content/PostTypes.php:79
+msgid "Edit Plan"
+msgstr "Редактировать тариф"
+
+#: src/Content/PostTypes.php:80
+msgid "All Plans"
+msgstr "Все тарифы"
+
+#: src/Content/PostTypes.php:81
+msgid "Search Plans"
+msgstr "Искать тарифы"
+
+#: src/Content/PostTypes.php:82
+msgid "No plans found."
+msgstr "Тарифов не найдено."
+
+#: src/Content/PostTypes.php:99
+#: build/upcoming-events/index.js:1
+msgid "Events"
+msgstr "События"
+
+#: src/Content/PostTypes.php:100
+msgid "Event"
+msgstr "Событие"
+
+#: src/Content/PostTypes.php:101
+msgid "Add New Event"
+msgstr "Добавить событие"
+
+#: src/Content/PostTypes.php:102
+msgid "Edit Event"
+msgstr "Редактировать событие"
+
+#: src/Content/PostTypes.php:103
+msgid "View Event"
+msgstr "Посмотреть событие"
+
+#: src/Content/PostTypes.php:104
+msgid "All Events"
+msgstr "Все события"
+
+#: src/Content/PostTypes.php:105
+msgid "Search Events"
+msgstr "Искать события"
+
+#: src/Content/PostTypes.php:106
+msgid "No events found."
+msgstr "Событий не найдено."
+
+#: src/Content/PostTypes.php:124
+msgid "Amenity"
+msgstr "Удобство"
+
+#: src/Content/PostTypes.php:125
+msgid "Add New Amenity"
+msgstr "Добавить удобство"
+
+#: src/Content/PostTypes.php:126
+msgid "Edit Amenity"
+msgstr "Редактировать удобство"
+
+#: src/Content/PostTypes.php:127
+msgid "All Amenities"
+msgstr "Все удобства"
+
+#: src/Content/PostTypes.php:128
+msgid "Search Amenities"
+msgstr "Искать удобства"
+
+#: src/Content/PostTypes.php:129
+msgid "No amenities found."
+msgstr "Удобств не найдено."
+
+#: src/Events/EventsController.php:58
+msgid "Event not found."
+msgstr "Событие не найдено."
+
+#. translators: 1: space name, 2: date.
+#: src/Notifications/BookingMailer.php:78
+#, php-format
+msgid "Booking confirmed: %1$s, %2$s"
+msgstr "Бронь подтверждена: %1$s, %2$s"
+
+#. translators: 1: space name, 2: date.
+#: src/Notifications/BookingMailer.php:80
+#, php-format
+msgid "Booking cancelled: %1$s, %2$s"
+msgstr "Бронь отменена: %1$s, %2$s"
+
+#: src/Notifications/BookingMailer.php:132
+msgctxt "email date"
+msgid "l j F Y"
+msgstr "l, j F Y"
+
+#: src/Rest/AvailabilityController.php:45
+msgid "Local date in the site timezone (YYYY-MM-DD)."
+msgstr "Дата в часовом поясе сайта (ГГГГ-ММ-ДД)."
+
+#: src/Rest/AvailabilityController.php:67
+msgid "Invalid date."
+msgstr "Неверная дата."
+
+#: src/Rest/BookingsController.php:98
+msgid "Only cancellation is supported."
+msgstr "Поддерживается только отмена."
+
+#: src/Rest/BookingsController.php:118
+msgid "You need to log in."
+msgstr "Нужно войти."
+
+#: src/Rest/BookingsController.php:134
+msgid "You are not allowed to book spaces."
+msgstr "У вас нет прав на бронирование."
+
+#: src/Rest/BookingsController.php:160
+msgid "Invalid start or end time."
+msgstr "Неверное время начала или окончания."
+
+#: src/Rest/Errors.php:19
+msgid "The end time must be after the start time."
+msgstr "Время окончания должно быть позже времени начала."
+
+#: src/Rest/Errors.php:20
+msgid "This time is too soon to book. Please choose a later slot."
+msgstr "Это время уже слишком близко. Выберите слот попозже."
+
+#: src/Rest/Errors.php:21
+msgid "This booking is longer than the maximum allowed."
+msgstr "Бронь длиннее допустимого."
+
+#: src/Rest/Errors.php:22
+msgid "The location is closed at this time."
+msgstr "В это время локация закрыта."
+
+#: src/Rest/Errors.php:23
+msgid "Bookings must start and end on a slot boundary."
+msgstr "Бронь должна начинаться и заканчиваться на границе слота."
+
+#: src/Rest/Errors.php:24
+msgid "This space is already booked for part of that time."
+msgstr "Пространство уже занято на часть этого времени."
+
+#: src/Rest/Errors.php:25
+msgid "It is too late to cancel this booking."
+msgstr "Отменить эту бронь уже нельзя."
+
+#: src/Rest/Errors.php:26
+msgid "This booking has already been cancelled."
+msgstr "Эта бронь уже отменена."
+
+#: src/Rest/Errors.php:27
+msgid "Space not found."
+msgstr "Пространство не найдено."
+
+#: src/Rest/Errors.php:28
+msgid "Another booking for this space is being processed. Please try again."
+msgstr "Другая бронь этого пространства сейчас обрабатывается. Попробуйте ещё раз."
+
+#: src/Rest/Errors.php:29
+msgid "The booking could not be processed."
+msgstr "Не удалось обработать бронь."
+
+#: src/Rest/Errors.php:39
+msgid "Booking not found."
+msgstr "Бронь не найдена."
+
+#: templates/emails/booking.php:21
+msgid "Price"
+msgstr "Стоимость"
+
+#: templates/emails/booking.php:44
+msgid "Your booking is confirmed"
+msgstr "Ваша бронь подтверждена"
+
+#: templates/emails/booking.php:44
+msgid "Your booking was cancelled"
+msgstr "Ваша бронь отменена"
+
+#. translators: %s: member name.
+#: templates/emails/booking.php:49
+#, php-format
+msgid "Hi %s,"
+msgstr "Здравствуйте, %s!"
+
+#: templates/emails/booking.php:53
+msgid "your room is booked. Here are the details."
+msgstr "Пространство забронировано. Подробности ниже."
+
+#: templates/emails/booking.php:54
+msgid "this booking has been cancelled and the room is free again."
+msgstr "Бронь отменена, пространство снова свободно."
+
+#: templates/emails/booking.php:68
+msgid "View my bookings"
+msgstr "Мои брони"
+
+#: build/booking-widget/index.js:1
+msgid "Current space"
+msgstr "Текущее пространство"
+
+#: build/booking-widget/index.js:1
+msgid "Select a space"
+msgstr "Выберите пространство"
+
+#: build/booking-widget/index.js:1
+msgid "Space to book"
+msgstr "Пространство для брони"
+
+#: build/booking-widget/index.js:1
+msgid "Space Booking"
+msgstr "Бронирование пространства"
+
+#: build/booking-widget/index.js:1
+msgid "Shows the booking form for the space being viewed."
+msgstr "Показывает форму бронирования для открытого пространства."
+
+#: build/booking-widget/index.js:1
+msgid "Choose a space in the block settings."
+msgstr "Выберите пространство в настройках блока."
+
+#: build/opening-hours/index.js:1
+msgid "Opening Hours"
+msgstr "Часы работы"
+
+#: build/opening-hours/index.js:1
+msgid "Shows the hours of the location or space being viewed."
+msgstr "Показывает часы работы открытой локации или пространства."
+
+#: build/plan-comparison/index.js:1
+msgid "Button"
+msgstr "Кнопка"
+
+#: build/plan-comparison/index.js:1
+msgid "Button link"
+msgstr "Ссылка кнопки"
+
+#: build/plan-comparison/index.js:1
+msgid "Leave empty to link to the account page."
+msgstr "Оставьте пустым, чтобы вести на страницу аккаунта."
+
+#: build/upcoming-events/index.js:1
+msgid "Number of events"
+msgstr "Количество событий"
+
+#: build/booking-widget/block.json
+msgctxt "block title"
+msgid "Space Booking"
+msgstr "Бронирование пространства"
+
+#: build/booking-widget/block.json
+msgctxt "block description"
+msgid "Lets members pick a date and time slots, then book a space."
+msgstr "Участники выбирают дату и время и бронируют пространство."
+
+#: build/booking-widget/block.json
+msgctxt "block keyword"
+msgid "booking"
+msgstr "бронирование"
+
+#: build/booking-widget/block.json
+msgctxt "block keyword"
+msgid "reserve"
+msgstr "забронировать"
+
+#: build/booking-widget/block.json
+#: build/upcoming-events/block.json
+msgctxt "block keyword"
+msgid "calendar"
+msgstr "календарь"
+
+#: build/booking-widget/block.json
+msgctxt "block keyword"
+msgid "slots"
+msgstr "слоты"
+
+#: build/my-bookings/block.json
+msgctxt "block title"
+msgid "My Bookings"
+msgstr "Мои брони"
+
+#: build/my-bookings/block.json
+msgctxt "block description"
+msgid "The logged-in member's upcoming and past bookings, with cancellation."
+msgstr "Предстоящие и прошедшие брони участника с возможностью отмены."
+
+#: build/my-bookings/block.json
+msgctxt "block keyword"
+msgid "account"
+msgstr "аккаунт"
+
+#: build/my-bookings/block.json
+msgctxt "block keyword"
+msgid "bookings"
+msgstr "брони"
+
+#: build/my-bookings/block.json
+msgctxt "block keyword"
+msgid "member"
+msgstr "участник"
+
+#: build/opening-hours/block.json
+msgctxt "block title"
+msgid "Opening Hours"
+msgstr "Часы работы"
+
+#: build/opening-hours/block.json
+msgctxt "block description"
+msgid "Weekly opening hours of a location, with today highlighted. On a space, shows its location's hours."
+msgstr "Часы работы локации на неделю с выделенным сегодняшним днём. На странице пространства показывает часы его локации."
+
+#: build/opening-hours/block.json
+msgctxt "block keyword"
+msgid "hours"
+msgstr "часы"
+
+#: build/opening-hours/block.json
+msgctxt "block keyword"
+msgid "open"
+msgstr "открыто"
+
+#: build/opening-hours/block.json
+msgctxt "block keyword"
+msgid "schedule"
+msgstr "расписание"
+
+#: build/plan-comparison/block.json
+msgctxt "block title"
+msgid "Plan Comparison"
+msgstr "Сравнение тарифов"
+
+#: build/plan-comparison/block.json
+msgctxt "block description"
+msgid "Membership plans side by side, with a monthly / yearly switch."
+msgstr "Тарифы рядом друг с другом и переключатель «помесячно / за год»."
+
+#: build/plan-comparison/block.json
+msgctxt "block keyword"
+msgid "pricing"
+msgstr "цены"
+
+#: build/plan-comparison/block.json
+msgctxt "block keyword"
+msgid "plans"
+msgstr "тарифы"
+
+#: build/plan-comparison/block.json
+msgctxt "block keyword"
+msgid "membership"
+msgstr "членство"
+
+#: build/space-finder/block.json
+msgctxt "block title"
+msgid "Space Finder"
+msgstr "Поиск пространств"
+
+#: build/space-finder/block.json
+msgctxt "block description"
+msgid "Lists spaces with filters for location, type, capacity and amenities."
+msgstr "Список пространств с фильтрами по локации, типу, вместимости и удобствам."
+
+#: build/space-finder/block.json
+msgctxt "block keyword"
+msgid "spaces"
+msgstr "пространства"
+
+#: build/space-finder/block.json
+msgctxt "block keyword"
+msgid "rooms"
+msgstr "комнаты"
+
+#: build/space-finder/block.json
+msgctxt "block keyword"
+msgid "filter"
+msgstr "фильтр"
+
+#: build/space-finder/block.json
+msgctxt "block keyword"
+msgid "search"
+msgstr "поиск"
+
+#: build/upcoming-events/block.json
+msgctxt "block title"
+msgid "Upcoming Events"
+msgstr "Ближайшие события"
+
+#: build/upcoming-events/block.json
+msgctxt "block description"
+msgid "The next events, with an Add to calendar link for each."
+msgstr "Ближайшие события со ссылкой «Добавить в календарь»."
+
+#: build/upcoming-events/block.json
+msgctxt "block keyword"
+msgid "events"
+msgstr "события"
+
+#: build/upcoming-events/block.json
+msgctxt "block keyword"
+msgid "meetup"
+msgstr "митап"

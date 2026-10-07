@@ -42,6 +42,14 @@ WP-CLI commands:
 | `npm run test:php` | Integration tests inside the wp-env tests container |
 | `composer lint` | PHPCS with WordPress Coding Standards |
 | `composer analyse` | PHPStan, level 6 |
+| `npm run i18n` | Regenerates `.pot` files, fills the Russian translation from `tools/i18n/ru.py` and compiles `.mo`, `.l10n.php` and JSON files |
+
+## Translations
+
+Every string in the plugin and theme is translatable (text domains `hive-core` and `hive`),
+including block editor scripts and `theme.json` labels. A complete Russian translation ships
+in each `languages/` folder. `build_po.py` fails if any string is missing a translation,
+and an integration test checks the catalogues stay complete.
 
 ## REST API
 
