@@ -51,4 +51,27 @@ async function spaceIdOnPage( page ) {
 	return JSON.parse( context ).spaceId;
 }
 
-module.exports = { weekdayAhead, bookThroughApi, spaceIdOnPage };
+/**
+ * Logs in through wp-login.php.
+ *
+ * The login page clears and focuses the username field 200 ms after load (wp_attempt_focus),
+ * so filling the form earlier races with it. Waiting past that timer makes logins reliable.
+ *
+ * @param {import('@playwright/test').Page} page     Page.
+ * @param {string}                          login    Username.
+ * @param {string}                          password Password.
+ */
+async function logIn( page, login, password ) {
+	await page.goto( '/wp-login.php', { waitUntil: 'load' } );
+	await page.waitForTimeout( 400 );
+
+	await page.getByLabel( 'Username or Email Address' ).fill( login );
+	await page.getByLabel( 'Password', { exact: true } ).fill( password );
+	await page.getByRole( 'button', { name: 'Log In' } ).click();
+	await page.waitForURL(
+		( url ) => ! url.pathname.endsWith( 'wp-login.php' ),
+		{ timeout: 30_000 }
+	);
+}
+
+module.exports = { weekdayAhead, bookThroughApi, spaceIdOnPage, logIn };

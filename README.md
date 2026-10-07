@@ -32,7 +32,8 @@ Nothing is saved.
 - **Admin.** A bookings screen with filters, bulk cancel and CSV export; a dashboard widget with
   today's occupancy; a settings page for the booking rules.
 - **Emails.** HTML confirmation and cancellation emails in the member's own language.
-- **WP-CLI.** `wp hive seed` creates the demo content; `wp hive bookings list` reports bookings.
+- **WP-CLI.** `wp hive seed` creates the demo content, including featured photos;
+  `wp hive bookings list` reports bookings.
 - **Theme.** A warm editorial block theme with a honeycomb motif, a dark *Night Shift* variation,
   translatable patterns and templates for every view.
 
@@ -139,4 +140,5 @@ and an integration test checks the catalogues stay complete.
 ## License
 
 GPL-2.0-or-later. Fonts: Literata and Onest, SIL Open Font License 1.1.
-Hive Coworking is a fictional company; the people quoted on the site are made up.
+Hive Coworking is a fictional company; the people quoted on the site are made up, and the
+demo photos of its locations and spaces are AI-generated.

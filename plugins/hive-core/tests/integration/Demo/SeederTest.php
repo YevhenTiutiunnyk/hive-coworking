@@ -11,11 +11,18 @@ use Hive\Core\Tests\Integration\TestCase;
 
 final class SeederTest extends TestCase {
 
+	public function tear_down(): void {
+		$this->remove_added_uploads();
+		parent::tear_down();
+	}
+
 	public function test_creates_the_demo_catalogue(): void {
 		$counts = ( new Seeder() )->run( self::local( '2030-01-07 09:00' ) );
 
 		$this->assertSame( 3, $counts['locations'] );
 		$this->assertSame( 12, $counts['spaces'] );
+		$this->assertSame( 15, $counts['photos'], 'Every location and space gets a photo.' );
+		$this->assertTrue( has_post_thumbnail( get_page_by_path( 'lighthouse-room', OBJECT, PostTypes::SPACE ) ) );
 		$this->assertSame( 3, $counts['plans'] );
 		$this->assertSame( 4, $counts['events'] );
 		$this->assertSame( 2, $counts['pages'] );

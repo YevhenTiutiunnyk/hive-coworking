@@ -29,13 +29,14 @@ final class Seeder {
 	 *
 	 * @param DateTimeImmutable $now           Current time; events and bookings are placed relative to it.
 	 * @param string|null       $demo_password Password for the demo member; random when null.
-	 * @return array{amenities: int, locations: int, spaces: int, plans: int, events: int, pages: int, members: int, bookings: int}
+	 * @return array{amenities: int, locations: int, spaces: int, photos: int, plans: int, events: int, pages: int, members: int, bookings: int}
 	 */
 	public function run( DateTimeImmutable $now, ?string $demo_password = null ): array {
 		return array(
 			'amenities' => $this->seed_amenities(),
 			'locations' => $this->seed_locations(),
 			'spaces'    => $this->seed_spaces(),
+			'photos'    => $this->seed_photos(),
 			'plans'     => $this->seed_plans(),
 			'events'    => $this->seed_events( $now ),
 			'pages'     => $this->seed_pages(),
@@ -116,6 +117,63 @@ final class Seeder {
 		}
 
 		return $created;
+	}
+
+	/**
+	 * Sets the bundled photos as featured images of locations and spaces that have none.
+	 */
+	private function seed_photos(): int {
+		$created = 0;
+
+		foreach ( array_merge( array_keys( DemoContent::locations() ), array_keys( DemoContent::spaces() ) ) as $slug ) {
+			$post_id = $this->ids[ $slug ] ?? 0;
+			$file    = dirname( __DIR__, 2 ) . '/assets/demo/' . $slug . '.jpg';
+
+			if ( $post_id && is_readable( $file ) && ! has_post_thumbnail( $post_id ) ) {
+				$created += $this->attach_photo( $post_id, $file );
+			}
+		}
+
+		return $created;
+	}
+
+	/**
+	 * Copies a photo into the uploads folder and makes it the post's featured image.
+	 *
+	 * @param int    $post_id Post to attach the photo to.
+	 * @param string $file    Absolute path of the photo.
+	 */
+	private function attach_photo( int $post_id, string $file ): int {
+		require_once ABSPATH . 'wp-admin/includes/image.php';
+
+		// phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents -- Reading a bundled local file.
+		$upload = wp_upload_bits( basename( $file ), null, (string) file_get_contents( $file ) );
+		if ( false !== $upload['error'] ) {
+			return 0;
+		}
+
+		$attachment_id = wp_insert_attachment(
+			array(
+				'post_mime_type' => 'image/jpeg',
+				'post_title'     => get_the_title( $post_id ),
+				'post_status'    => 'inherit',
+			),
+			$upload['file'],
+			$post_id
+		);
+		if ( 0 === $attachment_id ) {
+			return 0;
+		}
+
+		// The photos are already web-sized. Skipping sub-sizes keeps seeding fast in WordPress Playground.
+		add_filter( 'intermediate_image_sizes_advanced', '__return_empty_array' );
+		wp_update_attachment_metadata( $attachment_id, wp_generate_attachment_metadata( $attachment_id, $upload['file'] ) );
+		remove_filter( 'intermediate_image_sizes_advanced', '__return_empty_array' );
+
+		update_post_meta( $attachment_id, '_wp_attachment_image_alt', get_the_title( $post_id ) );
+		set_post_thumbnail( $post_id, $attachment_id );
+
+		return 1;
 	}
 
 	/**

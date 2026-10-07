@@ -1,16 +1,9 @@
-const { test: setup, expect } = require( '@playwright/test' );
+const { test: setup } = require( '@playwright/test' );
 const { MEMBER_LOGIN, MEMBER_PASSWORD } = require( './config' );
+const { logIn } = require( './helpers' );
 
 setup( 'log in as the demo member', async ( { page } ) => {
-	await page.goto( '/wp-login.php' );
-	await page.getByLabel( 'Username or Email Address' ).fill( MEMBER_LOGIN );
-	await page
-		.getByLabel( 'Password', { exact: true } )
-		.fill( MEMBER_PASSWORD );
-	await page.getByRole( 'button', { name: 'Log In' } ).click();
-	// The first request to a freshly started site can be slow in CI.
-	await expect( page ).not.toHaveURL( /wp-login\.php/, { timeout: 30_000 } );
-
+	await logIn( page, MEMBER_LOGIN, MEMBER_PASSWORD );
 	await page
 		.context()
 		.storageState( { path: 'tests/e2e/.auth/member.json' } );

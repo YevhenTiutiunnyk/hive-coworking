@@ -2,7 +2,7 @@
  * Captures the README screenshots: npm run screenshots
  */
 const { test, expect } = require( '@playwright/test' );
-const { weekdayAhead } = require( './helpers' );
+const { weekdayAhead, logIn } = require( './helpers' );
 
 const OUT = 'docs/screenshots';
 const shot = ( page, name ) =>
@@ -41,8 +41,16 @@ test( 'space finder', async ( { page } ) => {
 	await page.goto( '/spaces/?space_type=meeting_room', {
 		waitUntil: 'networkidle',
 	} );
-	await page.locator( '.hive-finder__filters' ).scrollIntoViewIfNeeded();
-	await page.evaluate( () => window.scrollBy( 0, -120 ) );
+	// Show the filters and the first row of results together.
+	await page.evaluate( () =>
+		window.scrollTo(
+			0,
+			document.querySelector( '.hive-finder' ).getBoundingClientRect()
+				.top +
+				window.scrollY -
+				90
+		)
+	);
 	await shot( page, 'finder' );
 } );
 
@@ -80,10 +88,8 @@ test( 'admin bookings screen', async ( { browser } ) => {
 		viewport: { width: 1440, height: 900 },
 	} );
 	const page = await context.newPage();
-	await page.goto( '/wp-login.php' );
-	await page.getByLabel( 'Username or Email Address' ).fill( 'admin' );
-	await page.getByLabel( 'Password', { exact: true } ).fill( 'password' );
-	await page.getByRole( 'button', { name: 'Log In' } ).click();
+	// Default wp-env administrator.
+	await logIn( page, 'admin', 'password' );
 	await page.goto( '/wp-admin/admin.php?page=hive-bookings&when=all' );
 	await page.screenshot( {
 		path: `${ OUT }/admin.jpg`,
