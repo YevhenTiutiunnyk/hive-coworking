@@ -123,4 +123,52 @@ Booking keeps working if the theme is switched.
 
 Payments, maps, event registration, recurring bookings.
 
-<!-- Next sections (features, REST API, blocks, account area, admin, testing) are added as they are approved. -->
+## Theme `hive`
+
+- Visual direction: warm editorial look; honey/amber accent on an off-white background,
+  deep charcoal text. Headings in Fraunces (serif), body in Inter. Fonts are bundled
+  in the theme and registered via `theme.json` `fontFace` (no Google CDN).
+- Style variation "Night Shift" (dark).
+- Templates: `front-page`, `single-hive_location`, `single-hive_space`,
+  `archive-hive_space`, `archive-hive_event`, `page-account`, `404`, `index`.
+  Template parts: `header`, `footer`.
+- Patterns: hero, location cards, testimonials, call to action, FAQ.
+- Accessibility: WCAG 2.2 AA; booking slots are keyboard-operable (arrow keys,
+  `aria-pressed`); visible focus styles; respects `prefers-reduced-motion`.
+- Performance: no jQuery; block scripts are ES modules (`viewScriptModule`) and load
+  only on pages that contain the block.
+
+## Quality
+
+- **PHPUnit** (wp-env tests environment): unit tests for booking validation (overlap,
+  opening hours, limits, notice); integration tests for REST routes (permissions,
+  `409 Conflict` on overlap, cancellation window).
+- **Jest**: slot-calculation utilities used by the booking block.
+- **Playwright** e2e: find a room, book it, hit a conflict, cancel.
+- **Static analysis**: PHPCS with WordPress Coding Standards, PHPStan level 6 with
+  WordPress stubs, ESLint and Stylelint via `@wordpress/scripts`.
+- **i18n**: text domains `hive-core` and `hive`; `.pot` generated with `wp i18n make-pot`;
+  `ru_RU` `.po`/`.mo` plus JSON translations for JavaScript.
+
+## CI and demo
+
+- GitHub Actions: lint + PHPStan → PHPUnit (PHP 8.1 and 8.3) → Playwright e2e.
+- On `main`, CI builds plugin and theme zips and deploys them to **GitHub Pages**
+  (Pages serves CORS headers; GitHub release downloads do not, so Playground cannot
+  fetch those).
+- `blueprint.json` installs the zips from Pages, runs the seeder and logs in the demo
+  member. The README links to the Playground demo.
+
+## Implementation order
+
+Each step is committed and pushed separately.
+
+1. Tooling: `package.json`, `composer.json`, `.wp-env.json`, lint configs.
+2. Plugin skeleton: CPTs, meta, taxonomy, role.
+3. Bookings table, repository, validator, tests.
+4. REST API and tests.
+5. Settings, admin list table, dashboard widget, WP-CLI, seeder.
+6. Blocks: booking widget, space finder, plans, events, my bookings.
+7. Theme.
+8. Emails, i18n and Russian translation.
+9. E2E, CI, Pages + Playground, README with screenshots.
