@@ -14,3 +14,6 @@ playwright-report/
 .phpunit.result.cache
 .DS_Store
 *.log
+
+# Playwright
+tests/e2e/.auth/

@@ -10,7 +10,7 @@
   "scripts": {
     "build": "wp-scripts build --webpack-src-dir=plugins/hive-core/blocks --output-path=plugins/hive-core/build --experimental-modules",
     "start": "wp-scripts start --webpack-src-dir=plugins/hive-core/blocks --output-path=plugins/hive-core/build --experimental-modules",
-    "lint:js": "wp-scripts lint-js plugins/hive-core/blocks",
+    "lint:js": "wp-scripts lint-js plugins/hive-core/blocks tests/e2e playwright.config.js",
     "lint:css": "wp-scripts lint-style \"plugins/hive-core/blocks/**/*.scss\" \"themes/hive/assets/css/*.css\"",
     "test:js": "wp-scripts test-unit-js plugins/hive-core/blocks",
     "env:start": "wp-env start",
@@ -18,9 +18,11 @@
     "env:clean": "wp-env clean all",
     "test:unit": "composer test:unit",
     "test:php": "wp-env run tests-cli --env-cwd=wp-content/hive-dev vendor/bin/phpunit -c plugins/hive-core/phpunit.xml.dist",
-    "i18n": "tools/i18n/build.sh"
+    "i18n": "tools/i18n/build.sh",
+    "test:e2e": "playwright test"
   },
   "devDependencies": {
+    "@playwright/test": "^1.63.0",
     "@wordpress/block-editor": "^18.1.0",
     "@wordpress/blocks": "^16.2.0",
     "@wordpress/components": "^42.0.0",
