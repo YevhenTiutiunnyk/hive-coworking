@@ -1,5 +1,5 @@
 .hive-account {
-	--hive-account-accent: var(--wp--preset--color--accent, #c98a00);
+	--hive-account-accent: var(--wp--preset--color--accent, #e8a317);
 	--hive-account-border: var(--wp--preset--color--contrast-3, #d6d3cc);
 	--hive-account-muted: var(--wp--preset--color--contrast-2, #6b6760);
 	--hive-account-surface: var(--wp--preset--color--base-2, #f6f3ec);
@@ -97,7 +97,7 @@
 	border: 1px solid currentcolor;
 	border-radius: 8px;
 	background: transparent;
-	color: #b32d2e;
+	color: var(--wp--preset--color--error, #a4262c);
 	font: inherit;
 	cursor: pointer;
 
@@ -115,6 +115,6 @@
 	}
 
 	&.is-error {
-		color: #b32d2e;
+		color: var(--wp--preset--color--error, #a4262c);
 	}
 }

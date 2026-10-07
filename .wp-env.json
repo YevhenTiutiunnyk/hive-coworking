@@ -1,7 +1,9 @@
 {
   "$schema": "https://schemas.wp.org/trunk/wp-env.json",
   "phpVersion": "8.3",
-  "plugins": ["./plugins/hive-core"],
+  "plugins": [
+    "./plugins/hive-core"
+  ],
   "config": {
     "WP_DEBUG": true,
     "WP_DEBUG_LOG": true,
@@ -17,5 +19,8 @@
         "wp-content/hive-dev": "."
       }
     }
-  }
+  },
+  "themes": [
+    "./themes/hive"
+  ]
 }

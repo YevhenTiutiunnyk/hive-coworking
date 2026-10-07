@@ -3,6 +3,7 @@
 	<description>WordPress Coding Standards with PSR-4 file names.</description>
 
 	<file>plugins/hive-core</file>
+	<file>themes/hive</file>
 
 	<exclude-pattern>*/vendor/*</exclude-pattern>
 	<exclude-pattern>*/node_modules/*</exclude-pattern>
@@ -31,6 +32,7 @@
 		<properties>
 			<property name="text_domain" type="array">
 				<element value="hive-core"/>
+				<element value="hive"/>
 			</property>
 		</properties>
 	</rule>

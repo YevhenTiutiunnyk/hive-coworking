@@ -1,5 +1,5 @@
 .hive-events {
-	--hive-events-accent: var(--wp--preset--color--accent, #c98a00);
+	--hive-events-accent: var(--wp--preset--color--accent, #e8a317);
 	--hive-events-border: var(--wp--preset--color--contrast-3, #d6d3cc);
 	--hive-events-muted: var(--wp--preset--color--contrast-2, #6b6760);
 }
@@ -31,7 +31,7 @@
 	height: 4rem;
 	border-radius: 12px;
 	background: var(--hive-events-accent);
-	color: #fff;
+	color: var(--wp--preset--color--accent-contrast, #211b14);
 	line-height: 1.1;
 	text-align: center;
 }

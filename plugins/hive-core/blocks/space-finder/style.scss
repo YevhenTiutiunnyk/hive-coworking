@@ -1,5 +1,5 @@
 .hive-finder {
-	--hive-finder-accent: var(--wp--preset--color--accent, #c98a00);
+	--hive-finder-accent: var(--wp--preset--color--accent, #e8a317);
 	--hive-finder-border: var(--wp--preset--color--contrast-3, #d6d3cc);
 	--hive-finder-muted: var(--wp--preset--color--contrast-2, #6b6760);
 	--hive-finder-surface: var(--wp--preset--color--base-2, #f6f3ec);
@@ -24,7 +24,7 @@
 		padding: 0.5rem 0.75rem;
 		border: 1px solid var(--hive-finder-border);
 		border-radius: 8px;
-		background: #fff;
+		background: var(--wp--preset--color--base, #fff);
 		font: inherit;
 	}
 }

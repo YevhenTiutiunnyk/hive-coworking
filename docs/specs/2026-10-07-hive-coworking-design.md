@@ -128,9 +128,11 @@ Payments, maps, event registration, recurring bookings.
 
 ## Theme `hive`
 
-- Visual direction: warm editorial look; honey/amber accent on an off-white background,
-  deep charcoal text. Headings in Fraunces (serif), body in Inter. Fonts are bundled
-  in the theme and registered via `theme.json` `fontFace` (no Google CDN).
+- Visual direction: warm editorial look; honey/amber accent on a paper background,
+  deep ink text, a hexagon / honeycomb motif and a subtle paper grain. Headings in
+  Literata (serif, optical sizes), body in Onest. Both have Cyrillic, which the Russian
+  translation needs (Fraunces, the first choice, does not). Fonts are bundled in the
+  theme and registered via `theme.json` `fontFace` (no Google CDN).
 - Style variation "Night Shift" (dark).
 - Templates: `front-page`, `single-hive_location`, `single-hive_space`,
   `archive-hive_space`, `archive-hive_event`, `page-account`, `404`, `index`.

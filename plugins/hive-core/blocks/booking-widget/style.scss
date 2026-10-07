@@ -1,5 +1,5 @@
 .hive-booking {
-	--hive-booking-accent: var(--wp--preset--color--accent, #c98a00);
+	--hive-booking-accent: var(--wp--preset--color--accent, #e8a317);
 	--hive-booking-border: var(--wp--preset--color--contrast-3, #d6d3cc);
 	--hive-booking-muted: var(--wp--preset--color--contrast-2, #6b6760);
 	--hive-booking-radius: 8px;
@@ -65,7 +65,7 @@
 	&.is-selected {
 		border-color: var(--hive-booking-accent);
 		background: var(--hive-booking-accent);
-		color: #fff;
+		color: var(--wp--preset--color--accent-contrast, #211b14);
 	}
 
 	&:disabled {
@@ -103,11 +103,11 @@
 	}
 
 	&.is-error {
-		color: #b32d2e;
+		color: var(--wp--preset--color--error, #a4262c);
 	}
 
 	&.is-success {
-		color: #1a7f37;
+		color: var(--wp--preset--color--success, #1d7a3a);
 	}
 }
 

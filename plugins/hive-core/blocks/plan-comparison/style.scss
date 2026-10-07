@@ -1,5 +1,5 @@
 .hive-plans {
-	--hive-plans-accent: var(--wp--preset--color--accent, #c98a00);
+	--hive-plans-accent: var(--wp--preset--color--accent, #e8a317);
 	--hive-plans-border: var(--wp--preset--color--contrast-3, #d6d3cc);
 	--hive-plans-muted: var(--wp--preset--color--contrast-2, #6b6760);
 	--hive-plans-surface: var(--wp--preset--color--base-2, #f6f3ec);
@@ -44,7 +44,7 @@
 	padding: 0.1rem 0.5rem;
 	border-radius: 999px;
 	background: var(--hive-plans-accent);
-	color: #fff;
+	color: var(--wp--preset--color--accent-contrast, #211b14);
 	font-size: 0.75em;
 	font-weight: 600;
 }
@@ -85,7 +85,7 @@
 	padding: 0.2rem 0.8rem;
 	border-radius: 999px;
 	background: var(--hive-plans-accent);
-	color: #fff;
+	color: var(--wp--preset--color--accent-contrast, #211b14);
 	font-size: 0.8em;
 	font-weight: 600;
 	transform: translate(-50%, -50%);
