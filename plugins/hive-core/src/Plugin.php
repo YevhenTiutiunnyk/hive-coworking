@@ -15,6 +15,10 @@ final class Plugin {
 		Content\Meta::register_hooks();
 		Roles::register_hooks();
 
+		if ( is_admin() ) {
+			Admin\SettingsPage::register_hooks();
+		}
+
 		add_action( 'rest_api_init', array( self::class, 'register_rest_routes' ) );
 	}
 
