@@ -22,7 +22,15 @@ Requirements: PHP 8.1+, Composer, Node.js 20+, Docker.
 composer install
 npm install
 npm run env:start   # WordPress at http://localhost:8888 (admin / password)
+npx wp-env run cli wp hive seed   # demo locations, spaces, plans, events and bookings
 ```
+
+WP-CLI commands:
+
+| Command | What it does |
+|---|---|
+| `wp hive seed [--demo-password=<password>]` | Creates demo content and a `demo` member; safe to rerun |
+| `wp hive bookings list [--when=upcoming\|past\|all] [--status=…] [--location=<id>] [--format=table\|csv\|json\|count]` | Lists bookings |
 
 | Command | What it does |
 |---|---|

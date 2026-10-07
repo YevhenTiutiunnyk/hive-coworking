@@ -22,6 +22,11 @@ final class Plugin {
 		}
 
 		add_action( 'rest_api_init', array( self::class, 'register_rest_routes' ) );
+
+		if ( defined( 'WP_CLI' ) && WP_CLI ) {
+			\WP_CLI::add_command( 'hive', Cli\HiveCommand::class );
+			\WP_CLI::add_command( 'hive bookings', Cli\BookingsCommand::class );
+		}
 	}
 
 	/**

@@ -4,3 +4,5 @@ parameters:
 		- plugins/hive-core
 	excludePaths:
 		- plugins/hive-core/tests
+	scanFiles:
+		- tools/phpstan/wp-cli-stubs.php
