@@ -130,7 +130,7 @@ $hive_id          = wp_unique_id( 'hive-finder-' );
 					$hive_terms       = get_the_terms( $hive_space, PostTypes::AMENITY );
 					?>
 					<li class="hive-finder__card">
-						<a class="hive-finder__image" href="<?php echo esc_url( get_permalink( $hive_space ) ); ?>" tabindex="-1" aria-hidden="true">
+						<a class="hive-finder__image<?php echo has_post_thumbnail( $hive_space ) ? '' : ' is-empty'; ?>" href="<?php echo esc_url( get_permalink( $hive_space ) ); ?>" tabindex="-1" aria-hidden="true">
 							<?php echo get_the_post_thumbnail( $hive_space, 'medium_large' ); ?>
 						</a>
 						<div class="hive-finder__body">

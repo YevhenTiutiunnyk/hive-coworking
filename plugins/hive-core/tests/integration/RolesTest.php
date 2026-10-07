@@ -39,4 +39,12 @@ final class RolesTest extends TestCase {
 			Roles::install();
 		}
 	}
+
+	public function test_members_do_not_see_the_admin_toolbar(): void {
+		wp_set_current_user( self::factory()->user->create( array( 'role' => Roles::MEMBER ) ) );
+		$this->assertFalse( Roles::show_admin_bar( true ) );
+
+		wp_set_current_user( self::factory()->user->create( array( 'role' => 'editor' ) ) );
+		$this->assertTrue( Roles::show_admin_bar( true ) );
+	}
 }

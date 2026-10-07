@@ -8,7 +8,8 @@ setup( 'log in as the demo member', async ( { page } ) => {
 		.getByLabel( 'Password', { exact: true } )
 		.fill( MEMBER_PASSWORD );
 	await page.getByRole( 'button', { name: 'Log In' } ).click();
-	await expect( page ).not.toHaveURL( /wp-login\.php/ );
+	// The first request to a freshly started site can be slow in CI.
+	await expect( page ).not.toHaveURL( /wp-login\.php/, { timeout: 30_000 } );
 
 	await page
 		.context()

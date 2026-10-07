@@ -19,8 +19,9 @@
     "test:unit": "composer test:unit",
     "test:php": "wp-env run tests-cli --env-cwd=wp-content/hive-dev vendor/bin/phpunit -c plugins/hive-core/phpunit.xml.dist",
     "i18n": "tools/i18n/build.sh",
-    "test:e2e": "playwright test",
-    "package": "tools/package.sh"
+    "test:e2e": "playwright test --project=chromium",
+    "package": "tools/package.sh",
+    "screenshots": "playwright test --project=screenshots"
   },
   "devDependencies": {
     "@playwright/test": "^1.63.0",

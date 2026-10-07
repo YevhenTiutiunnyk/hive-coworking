@@ -198,7 +198,7 @@ body::before {
 }
 
 /* Spaces, locations and events without a photo get a honeycomb illustration. */
-.hive-finder__image:empty,
+.hive-finder__image.is-empty,
 .hive-placeholder {
 	background:
 		radial-gradient(circle at 72% 28%, color-mix(in srgb, var(--wp--preset--color--accent) 55%, transparent), transparent 55%),

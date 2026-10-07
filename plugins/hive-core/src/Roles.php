@@ -15,6 +15,16 @@ final class Roles {
 	 */
 	public static function register_hooks(): void {
 		add_filter( 'pre_option_default_role', array( self::class, 'default_role' ) );
+		add_filter( 'show_admin_bar', array( self::class, 'show_admin_bar' ) );
+	}
+
+	/**
+	 * Hides the admin toolbar from members, who never need wp-admin.
+	 *
+	 * @param bool $show Whether WordPress would show the toolbar.
+	 */
+	public static function show_admin_bar( bool $show ): bool {
+		return $show && current_user_can( 'edit_posts' );
 	}
 
 	/**

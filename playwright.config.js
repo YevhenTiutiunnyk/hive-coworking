@@ -30,5 +30,14 @@ module.exports = defineConfig( {
 			dependencies: [ 'setup' ],
 			testIgnore: /screenshots\.spec\.js/,
 		},
+		{
+			name: 'screenshots',
+			testMatch: /screenshots\.spec\.js/,
+			use: {
+				...devices[ 'Desktop Chrome' ],
+				storageState: 'tests/e2e/.auth/member.json',
+			},
+			dependencies: [ 'setup' ],
+		},
 	],
 } );

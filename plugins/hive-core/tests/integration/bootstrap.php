@@ -27,3 +27,7 @@ require __DIR__ . '/TestCase.php';
 
 // The test database is installed fresh, so run activation once for the whole suite.
 \Hive\Core\Activation::activate();
+
+// The core installer only resets core tables. The wp-env tests site shares this database
+// (the e2e tests seed it), so start every run with an empty bookings table.
+$GLOBALS['wpdb']->query( $GLOBALS['wpdb']->prepare( 'DELETE FROM %i', \Hive\Core\Bookings\Schema::table() ) );

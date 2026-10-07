@@ -20,6 +20,10 @@ module.exports = async () => {
 	wp( 'theme activate hive' );
 	wp( 'rewrite structure /%postname%/ --hard' );
 	wp( 'option update timezone_string Europe/Amsterdam' );
+	wp( 'option update blogname "Hive Coworking"' );
+	wp(
+		'option update blogdescription "Rooms and desks you can book by the hour"'
+	);
 	wp(
 		`eval 'global $wpdb; $wpdb->query( "DELETE FROM " . Hive\\Core\\Bookings\\Schema::table() );'`
 	);
