@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "hive/space-finder",
+	"version": "0.1.0",
+	"title": "Space Finder",
+	"category": "widgets",
+	"icon": "search",
+	"description": "Lists spaces with filters for location, type, capacity and amenities.",
+	"keywords": [ "spaces", "rooms", "filter", "search" ],
+	"textdomain": "hive-core",
+	"supports": {
+		"html": false,
+		"interactivity": true,
+		"align": [ "wide", "full" ],
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css",
+	"viewScriptModule": "file:./view.js",
+	"render": "file:./render.php"
+}
