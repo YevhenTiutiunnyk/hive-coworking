@@ -6,6 +6,11 @@ const { MEMBER_PASSWORD } = require( './config' );
  * no bookings and fresh demo content.
  */
 module.exports = async () => {
+	// Set E2E_SKIP_RESET=1 to run against another site, such as a local WordPress Playground.
+	if ( process.env.E2E_SKIP_RESET ) {
+		return;
+	}
+
 	const wp = ( command ) =>
 		execSync( `npx wp-env run tests-cli wp ${ command }`, {
 			stdio: 'pipe',

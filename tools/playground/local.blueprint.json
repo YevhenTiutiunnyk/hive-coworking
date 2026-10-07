@@ -1,0 +1,22 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"landingPage": "/",
+	"preferredVersions": { "php": "8.3", "wp": "latest" },
+	"steps": [
+		{ "step": "activatePlugin", "pluginPath": "hive-core/hive-core.php" },
+		{ "step": "activateTheme", "themeFolderName": "hive" },
+		{
+			"step": "setSiteOptions",
+			"options": {
+				"blogname": "Hive Coworking",
+				"blogdescription": "Rooms and desks you can book by the hour",
+				"timezone_string": "Europe/Amsterdam"
+			}
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php require '/wordpress/wp-load.php'; global $wp_rewrite; $wp_rewrite->set_permalink_structure( '/%postname%/' ); flush_rewrite_rules(); ( new Hive\\Core\\Demo\\Seeder() )->run( current_datetime(), 'demo' );"
+		},
+		{ "step": "login", "username": "demo", "password": "demo" }
+	]
+}
