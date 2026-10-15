@@ -125,14 +125,13 @@ jobs:
       - run: npm run package
 
       - name: Assemble the site
-        run: |
-          mkdir site
-          cp tools/playground/site/* site/
-          cp dist/*.zip site/
+        run: npm run site
+        env:
+          SITE_URL: https://yevhentiutiunnyk.github.io/hive-coworking
 
       - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v5
         with:
-          path: site
+          path: dist/site
       - id: deployment
         uses: actions/deploy-pages@v5

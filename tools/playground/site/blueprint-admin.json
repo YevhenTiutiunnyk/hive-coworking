@@ -21,7 +21,7 @@
 			"step": "installPlugin",
 			"pluginData": {
 				"resource": "url",
-				"url": "https://yevhentiutiunnyk.github.io/hive-coworking/hive-core.zip"
+				"url": "__SITE_URL__/hive-core.zip"
 			},
 			"options": {
 				"activate": true
@@ -31,7 +31,7 @@
 			"step": "installTheme",
 			"themeData": {
 				"resource": "url",
-				"url": "https://yevhentiutiunnyk.github.io/hive-coworking/hive.zip"
+				"url": "__SITE_URL__/hive.zip"
 			},
 			"options": {
 				"activate": true

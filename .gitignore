@@ -17,3 +17,6 @@ playwright-report/
 
 # Playwright
 tests/e2e/.auth/
+
+.vercel
+.env*

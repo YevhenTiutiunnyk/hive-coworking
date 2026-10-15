@@ -21,7 +21,8 @@
     "i18n": "tools/i18n/build.sh",
     "test:e2e": "playwright test --project=chromium",
     "package": "tools/package.sh",
-    "screenshots": "playwright test --project=screenshots"
+    "screenshots": "playwright test --project=screenshots",
+    "site": "node tools/playground/build-site.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.63.0",
