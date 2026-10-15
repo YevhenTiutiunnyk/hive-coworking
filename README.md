@@ -9,9 +9,9 @@ A full-stack WordPress project for a fictional coworking network: a **block them
 **booking plugin** with its own database table, REST API, Gutenberg blocks, the Interactivity
 API, WP-CLI commands, emails, a complete Russian translation and tests at every level.
 
-**[▶ Try the live demo](https://playground.wordpress.net/?blueprint-url=https://yevhentiutiunnyk.github.io/hive-coworking/blueprint.json)**
+**[▶ Try the live demo at hive-coworking.vercel.app](https://hive-coworking.vercel.app)**
 (logged in as a member, book a room) ·
-**[Open the admin](https://playground.wordpress.net/?blueprint-url=https://yevhentiutiunnyk.github.io/hive-coworking/blueprint-admin.json)**
+**[Open the admin](https://playground.wordpress.net/?blueprint-url=https://hive-coworking.vercel.app/blueprint-admin.json)**
 
 The demo runs entirely in your browser with WordPress Playground (PHP in WebAssembly, SQLite).
 Nothing is saved.
@@ -128,7 +128,8 @@ npx wp-env run cli wp hive seed   # demo content
 
 **CI** runs the linters and unit tests, PHPUnit integration tests on PHP 8.1 and 8.3 and the
 Playwright suite. When everything passes on `main`, it publishes the zips and Playground
-blueprints to GitHub Pages, which is where the live demo comes from.
+blueprints to GitHub Pages. Vercel builds the same site from every push to `main` and serves
+it at [hive-coworking.vercel.app](https://hive-coworking.vercel.app) (`vercel.json`).
 
 ## Translations
 

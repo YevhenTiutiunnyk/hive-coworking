@@ -21,7 +21,7 @@
 			"step": "installPlugin",
 			"pluginData": {
 				"resource": "url",
-				"url": "https://yevhentiutiunnyk.github.io/hive-coworking/hive-core.zip"
+				"url": "https://hive-coworking.vercel.app/hive-core.zip"
 			},
 			"options": {
 				"activate": true
@@ -31,7 +31,7 @@
 			"step": "installTheme",
 			"themeData": {
 				"resource": "url",
-				"url": "https://yevhentiutiunnyk.github.io/hive-coworking/hive.zip"
+				"url": "https://hive-coworking.vercel.app/hive.zip"
 			},
 			"options": {
 				"activate": true
